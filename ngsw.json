@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1795626075338,
+  "timestamp": 1795626471323,
   "index": "/irl-rpg/index.html",
   "assetGroups": [
     {
@@ -11,14 +11,14 @@
         "ignoreVary": true
       },
       "urls": [
-        "/irl-rpg/chunk-Bfi1TAzz.js",
-        "/irl-rpg/chunk-BimoWbvp.js",
-        "/irl-rpg/chunk-CH1_lL7x.js",
-        "/irl-rpg/chunk-Dv1kDc3b.js",
-        "/irl-rpg/chunk-hvz_xrhk.js",
+        "/irl-rpg/chunk-6_WKy_Jk.js",
+        "/irl-rpg/chunk-BZYiH7x9.js",
+        "/irl-rpg/chunk-BdWLeVti.js",
+        "/irl-rpg/chunk-BwoGz83D.js",
+        "/irl-rpg/chunk-CJbzT96j.js",
         "/irl-rpg/favicon.ico",
         "/irl-rpg/index.html",
-        "/irl-rpg/main-E7FYAK2W.js",
+        "/irl-rpg/main-G2DG47SS.js",
         "/irl-rpg/manifest.webmanifest",
         "/irl-rpg/styles-Z2VFLTUL.css"
       ],
@@ -448,11 +448,11 @@
     }
   ],
   "hashTable": {
-    "/irl-rpg/chunk-Bfi1TAzz.js": "95dbbdb479041215ed96183a02abb2ada652c1b5",
-    "/irl-rpg/chunk-BimoWbvp.js": "3b96a741c7d8ee133b639c13aa2bd1affae1b776",
-    "/irl-rpg/chunk-CH1_lL7x.js": "de560ba5c60666f7854723f70d14c2cc65d2cfc0",
-    "/irl-rpg/chunk-Dv1kDc3b.js": "77436222fc5e255c6f7d29b3cbaf259b5d7df733",
-    "/irl-rpg/chunk-hvz_xrhk.js": "ef66d24a56f71887a327ae1d2f5cd53c8afe6612",
+    "/irl-rpg/chunk-6_WKy_Jk.js": "1ddd9c41f0b029cb0e677da17d68250ace1e81c4",
+    "/irl-rpg/chunk-BZYiH7x9.js": "35973e60c5c7c3fffcf45d401c51373525a8ed32",
+    "/irl-rpg/chunk-BdWLeVti.js": "05ef0fa3887c49e7da5def74b5aa12ad365e48b1",
+    "/irl-rpg/chunk-BwoGz83D.js": "f66aa66b0f26fc1965fe3a1494fc36fdeeef64f1",
+    "/irl-rpg/chunk-CJbzT96j.js": "1738c71526305a86cf59206c5d09948c765bb480",
     "/irl-rpg/favicon.ico": "4628952504fc65dd52a534c5d371208c075da573",
     "/irl-rpg/icons/icon-128x128.png": "f468f72249ee3b54fc831f22956f9953bd14eaf1",
     "/irl-rpg/icons/icon-144x144.png": "cbe164cd265eded399ab9f4330e7b58a37c2b40b",
@@ -463,8 +463,8 @@
     "/irl-rpg/icons/icon-72x72.png": "08e2d87a64987d05da1fc8d196657444b12371ab",
     "/irl-rpg/icons/icon-96x96.png": "3f97a4c8ba09580d0bb97a2a8b097788b99d97d7",
     "/irl-rpg/icons/icon-maskable-512x512.png": "e93a3a9aec5b8034a20ae86f260235a40457d8fa",
-    "/irl-rpg/index.html": "74d52d7aacc3a93b882c65ebd10f03b03db618bb",
-    "/irl-rpg/main-E7FYAK2W.js": "08dddb5bd552f0084e100fa58da77cac96cbd2ca",
+    "/irl-rpg/index.html": "188c1212bb6547a7cf820244edc041f161a3a554",
+    "/irl-rpg/main-G2DG47SS.js": "d630e314737bb5d52f8bd0cb37d0d273407b85c3",
     "/irl-rpg/manifest.webmanifest": "510da59a09a83845bbdfa23e54ffb8d43df2a493",
     "/irl-rpg/modelli/anteprime/aethelraed_unraed_cloche_hat.webp": "71c7b070a1b306bcb523a64fd6ea93780087a165",
     "/irl-rpg/modelli/anteprime/afro01.webp": "dc1aeb2c7de6fcd655962eed3b80c9e6b6219e0a",
