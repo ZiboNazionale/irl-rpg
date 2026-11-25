@@ -73,7 +73,6 @@
 
         <section class="riquadro">
           <h3>Come stai oggi?</h3>
-          <p class="nota">Il check-in di ogni giorno muove il tuo Benessere. Non ci sono risposte giuste.</p>
           <div class="umori" role="radiogroup" aria-label="Come stai oggi">
             @for (u of umori; track u.valore) {
               <button type="button" role="radio" [attr.aria-checked]="giocatore.giorno()?.umore === u.valore"

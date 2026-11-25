@@ -10,13 +10,13 @@ describe('Giocatore', () => {
 
   it('salva aspetto e risposte nel browser', () => {
     const g = crea();
-    g.cambiaNome('Zibo');
+    g.cambiaNome('Marco');
     g.cambiaAspetto({ altezzaCm: 182, pesoKg: 80 });
     g.rispondi(0, 4);
     TestBed.tick();
 
     const salvato = JSON.parse(localStorage.getItem('irl-rpg-v4')!);
-    expect(salvato.nome).toBe('Zibo');
+    expect(salvato.nome).toBe('Marco');
     expect(salvato.aspetto.altezzaCm).toBe(182);
     expect(salvato.risposte[0]).toBe(4);
     expect(salvataggioValido(salvato)).toBe(true);

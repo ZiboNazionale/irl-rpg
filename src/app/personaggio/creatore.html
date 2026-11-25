@@ -62,7 +62,7 @@
         @case ('fisico') {
           <label class="campo">
             <span class="etichetta">Nome del personaggio</span>
-            <input type="text" maxlength="30" autocomplete="nickname" placeholder="Es. Zibo"
+            <input type="text" maxlength="30" autocomplete="nickname"
               [value]="giocatore.dati().nome" (input)="giocatore.cambiaNome($any($event.target).value)"
               [attr.aria-invalid]="provato() && !nomeValido()" aria-describedby="errore-nome" />
           </label>
