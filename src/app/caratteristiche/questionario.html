@@ -1,0 +1,36 @@
+<div class="questionario" (keydown)="tasto($event)" tabindex="-1">
+  <header class="testata">
+    <button type="button" class="indietro" (click)="precedente()">
+      <span aria-hidden="true">←</span> {{ indice() === 0 ? 'Personaggio' : 'Indietro' }}
+    </button>
+    <p class="passo">Passo 2 di 2 · Test caratteristiche</p>
+    <span class="contatore" aria-live="polite">{{ indice() + 1 }} / {{ totale }}</span>
+  </header>
+
+  <div class="barra" role="progressbar" aria-label="Domande risposte" [attr.aria-valuenow]="giocatore.domandeRisposte()"
+    aria-valuemin="0" [attr.aria-valuemax]="totale">
+    <i [style.transform]="'scaleX(' + avanzamento() + ')'"></i>
+  </div>
+
+  @let c = caratteristica();
+  <main class="corpo">
+    <p class="categoria">
+      <span class="sigla">{{ c.sigla }}</span>
+      {{ c.gruppo }} · {{ c.nome }} <span class="parte">{{ parte() }}/3</span>
+    </p>
+    <h1 id="domanda">{{ domanda().testo }}</h1>
+
+    <div class="risposte" role="radiogroup" aria-labelledby="domanda">
+      @for (r of domanda().risposte; track $index) {
+        <button type="button" role="radio" class="risposta" [class.scelta]="scelta() === $index"
+          [attr.aria-checked]="scelta() === $index" (click)="rispondi($index)">
+          <span class="tasto" aria-hidden="true">{{ $index + 1 }}</span>
+          <span>{{ r }}</span>
+        </button>
+      }
+    </div>
+
+    <p class="aiuto">Pensa a come sei davvero adesso, non a come vorresti essere: le risposte restano solo su questo dispositivo.
+      Puoi rispondere anche con i tasti da 1 a 5.</p>
+  </main>
+</div>

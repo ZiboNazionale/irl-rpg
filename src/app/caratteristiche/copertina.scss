@@ -1,0 +1,249 @@
+.copertina {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  background: var(--sfondo);
+}
+
+.palco {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 60% 45% at 50% 45%, rgb(194 248 90 / 16%), transparent 70%),
+    linear-gradient(165deg, #1b2410, #0b0d10 65%);
+}
+
+.avatar {
+  position: absolute;
+  inset: 0;
+}
+
+.cornice {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 32px;
+  border: 1px solid rgb(194 248 90 / 25%);
+  pointer-events: none;
+}
+
+.alto {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.ovr {
+  display: grid;
+  line-height: 0.9;
+
+  strong {
+    color: var(--accento);
+    font-family: var(--titoli);
+    font-size: clamp(64px, 9vw, 120px);
+    font-weight: 700;
+  }
+
+  span {
+    color: var(--testo-tenue);
+    font-family: var(--titoli);
+    font-size: 24px;
+    letter-spacing: 0.12em;
+  }
+}
+
+.ruolo {
+  padding: 8px 14px;
+  border: 1px solid rgb(194 248 90 / 40%);
+  border-radius: 999px;
+  background: rgb(11 13 16 / 60%);
+  color: var(--accento);
+  font-family: var(--titoli);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.basso {
+  text-align: center;
+}
+
+.nome {
+  margin: 0 0 8px;
+  font-family: var(--titoli);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 0 4px 24px rgb(0 0 0 / 60%);
+}
+
+.sigle {
+  display: inline-grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 4px 28px;
+  margin: 0;
+  padding: 10px 24px;
+  border-radius: 12px;
+  background: rgb(11 13 16 / 55%);
+  list-style: none;
+
+  li {
+    color: var(--testo-tenue);
+    font-family: var(--titoli);
+    font-size: 18px;
+    letter-spacing: 0.05em;
+  }
+
+  strong {
+    color: var(--testo);
+    font-size: 26px;
+  }
+}
+
+.comandi {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px 22px;
+  border-left: 1px solid var(--bordo);
+  background: var(--pannello);
+
+  h2 {
+    margin: 0;
+    font-family: var(--titoli);
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  legend {
+    margin-bottom: 10px;
+    font-family: var(--titoli);
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}
+
+.aiuto {
+  margin: 0;
+  color: var(--testo-tenue);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.interruttore {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  font-size: 15px;
+  cursor: pointer;
+
+  input {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--accento);
+  }
+}
+
+.parte {
+  min-height: 20px;
+  margin: 0;
+  color: var(--accento);
+  font-size: 14px;
+}
+
+.secondario.piccolo {
+  min-height: 40px;
+  font-size: 16px;
+}
+
+.pose {
+  display: grid;
+  gap: 8px;
+
+  button {
+    min-height: 44px;
+    padding: 0 14px;
+    border: 1px solid var(--bordo);
+    border-radius: 10px;
+    background: var(--sfondo);
+    color: var(--testo-tenue);
+    font-size: 15px;
+    text-align: left;
+    cursor: pointer;
+
+    &.attiva {
+      border-color: var(--accento);
+      background: var(--accento-scuro);
+      color: var(--accento);
+      font-weight: 600;
+    }
+  }
+}
+
+.primario,
+.secondario {
+  min-height: 50px;
+  border-radius: 12px;
+  font-family: var(--titoli);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.primario {
+  margin-top: auto;
+  border: 0;
+  background: var(--accento);
+  color: #10140a;
+}
+
+.secondario {
+  border: 1px solid var(--bordo);
+  background: transparent;
+  color: var(--testo);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accento);
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .copertina {
+    grid-template-columns: 1fr;
+    grid-template-rows: 62dvh minmax(0, 1fr);
+  }
+
+  .comandi {
+    overflow-y: auto;
+    padding: 16px;
+    border-top: 1px solid var(--bordo);
+    border-left: 0;
+  }
+
+  .pose {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cornice {
+    padding: 16px;
+  }
+}

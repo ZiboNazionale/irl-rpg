@@ -1,0 +1,193 @@
+<div class="centro">
+  <header class="testata">
+    <div class="giocatore">
+      <p class="sopratitolo">Modalità carriera</p>
+      <h1>{{ giocatore.dati().nome }}</h1>
+    </div>
+
+    <div class="indicatori">
+      <div class="indicatore ovr">
+        <strong>{{ giocatore.ovr() }}</strong>
+        <span>OVR</span>
+      </div>
+      <div class="indicatore">
+        <strong>{{ giocatore.serie() }}</strong>
+        <span>{{ giocatore.serie() === 1 ? 'giorno' : 'giorni' }} di fila</span>
+      </div>
+      @let l = giocatore.livello();
+      <div class="livello">
+        <div class="livello__testo">
+          <strong>Livello {{ l.livello }}</strong>
+          <span>{{ l.nelLivello }} / {{ l.perProssimo }} XP</span>
+        </div>
+        <div class="barra" role="progressbar" aria-label="XP verso il prossimo livello"
+          [attr.aria-valuenow]="l.nelLivello" aria-valuemin="0" [attr.aria-valuemax]="l.perProssimo">
+          <i [style.width.%]="(l.nelLivello / l.perProssimo) * 100"></i>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sezioni" role="tablist" aria-label="Centro giocatore">
+      @for (s of sezioni; track s.id) {
+        <button type="button" role="tab" [id]="'sezione-' + s.id" [attr.aria-selected]="sezione() === s.id"
+          [attr.aria-controls]="'pannello-' + s.id" [class.attiva]="sezione() === s.id" (click)="sezione.set(s.id)">{{ s.nome }}</button>
+      }
+    </nav>
+  </header>
+
+  <main class="pannello" role="tabpanel" [id]="'pannello-' + sezione()" [attr.aria-labelledby]="'sezione-' + sezione()">
+    @switch (sezione()) {
+      @case ('oggi') {
+        <div class="titolo-sezione">
+          <div>
+            <p class="sopratitolo">{{ dataOggi() }}</p>
+            <h2>Missioni di oggi</h2>
+          </div>
+          <span class="contatore">{{ fatteOggi() }}/{{ missioni().length }}</span>
+        </div>
+        @if (bonusSerie() > 0) {
+          <p class="bonus">Serie di {{ giocatore.serie() }} {{ giocatore.serie() === 1 ? 'giorno' : 'giorni' }}: +{{ bonusSerie() }}% XP su ogni missione.</p>
+        }
+
+        <div class="missioni">
+          @for (m of missioni(); track m.id) {
+            <article class="missione" [class.fatta]="m.fatta">
+              <div class="missione__alto">
+                <span class="etichetta">{{ m.gruppo }} · {{ m.caratteristica }}</span>
+                <span class="difficolta" [attr.data-difficolta]="m.difficolta">{{ m.difficolta }}</span>
+              </div>
+              <h3>{{ m.titolo }}</h3>
+              <p>{{ m.descrizione }}</p>
+              <div class="missione__basso">
+                <strong class="xp">+{{ m.xp }} XP</strong>
+                @if (m.fatta) {
+                  <button type="button" class="testo" (click)="giocatore.annullaMissione(m.id)">Annulla</button>
+                  <span class="fatto" aria-label="Completata">✓ Fatta</span>
+                } @else {
+                  <button type="button" class="primario" (click)="giocatore.completaMissione(m.id)">Completa</button>
+                }
+              </div>
+            </article>
+          }
+        </div>
+
+        <section class="riquadro">
+          <h3>Come stai oggi?</h3>
+          <p class="nota">Il check-in di ogni giorno muove il tuo Benessere. Non ci sono risposte giuste.</p>
+          <div class="umori" role="radiogroup" aria-label="Come stai oggi">
+            @for (u of umori; track u.valore) {
+              <button type="button" role="radio" [attr.aria-checked]="giocatore.giorno()?.umore === u.valore"
+                [class.attivo]="giocatore.giorno()?.umore === u.valore" (click)="giocatore.segnaUmore(u.valore)">
+                <strong>{{ u.valore }}</strong>{{ u.nome }}
+              </button>
+            }
+          </div>
+        </section>
+
+        <details class="regole">
+          <summary>Come funzionano XP e malus</summary>
+          <ul>
+            <li>Ogni missione vale XP in base alla difficoltà e fa crescere la sua caratteristica.</li>
+            <li>Più giorni di fila completi almeno una missione, più XP prendi: +10% al giorno, fino a +50%.</li>
+            <li>A fine giornata ogni missione non fatta costa {{ regole.MALUS_MISSIONE }} XP e un po' della sua caratteristica.</li>
+            <li>Fare tutte le missioni del giorno alza la Disciplina; saltarne la abbassa.</li>
+            <li>Ogni giorno senza aprire l'app costa {{ regole.MALUS_GIORNO_SALTATO }} XP (al massimo per 3 giorni di fila).</li>
+            <li>Gli XP persi possono farti scendere di livello. Le caratteristiche non scendono mai più di 15 punti sotto il test.</li>
+          </ul>
+        </details>
+      }
+
+      @case ('abitudini') {
+        <div class="titolo-sezione">
+          <div>
+            <p class="sopratitolo">Onestà prima di tutto</p>
+            <h2>Abitudini da battere</h2>
+          </div>
+        </div>
+        <p class="introduzione">Se oggi ci sei ricascato, segnalo: costa {{ regole.MALUS_RICADUTA }} XP e un po' della caratteristica
+          collegata. Si può segnare una volta al giorno. Non è una punizione: serve a vedere dove lavorare.</p>
+        <div class="abitudini">
+          @for (r of ricadute; track r.id) {
+            <article class="abitudine" [class.segnata]="ricadutaOggi(r.id)">
+              <h3>{{ r.nome }}</h3>
+              <button type="button" class="secondario" [disabled]="ricadutaOggi(r.id)" (click)="giocatore.segnaRicaduta(r.id)">
+                {{ ricadutaOggi(r.id) ? 'Segnata oggi' : 'Segna ricaduta' }}
+              </button>
+            </article>
+          }
+        </div>
+      }
+
+      @case ('sfide') {
+        <div class="titolo-sezione">
+          <div>
+            <p class="sopratitolo">Si azzerano ogni lunedì</p>
+            <h2>Sfide della settimana</h2>
+          </div>
+        </div>
+        <div class="sfide">
+          @for (s of sfide(); track s.id) {
+            <article class="sfida" [class.completa]="s.completa">
+              <div class="sfida__alto">
+                <h3>{{ s.nome }}</h3>
+                <span class="xp">+{{ s.xp }} XP</span>
+              </div>
+              <p>{{ s.descrizione }}</p>
+              <div class="barra"><i [style.width.%]="(s.fatto / s.obiettivo) * 100"></i></div>
+              <div class="sfida__basso">
+                <span>{{ s.fatto }} / {{ s.obiettivo }}</span>
+                <button type="button" [class.primario]="s.completa && !s.riscattata" [class.secondario]="!s.completa || s.riscattata"
+                  [disabled]="!s.completa || s.riscattata" (click)="giocatore.riscattaSfida(s.id)">
+                  {{ s.riscattata ? '✓ Riscattata' : s.completa ? 'Riscatta' : 'In corso' }}
+                </button>
+              </div>
+            </article>
+          }
+        </div>
+      }
+
+      @case ('diario') {
+        <div class="titolo-sezione">
+          <div>
+            <p class="sopratitolo">La tua storia</p>
+            <h2>Diario</h2>
+          </div>
+          <span class="contatore">{{ giocatore.carriera().xp }} XP</span>
+        </div>
+        @if (diario().length) {
+          <ol class="diario">
+            @for (v of diario(); track $index) {
+              <li>
+                <time class="data" [attr.datetime]="v.data">{{ v.quando }}</time>
+                <span class="testo-voce">{{ v.testo }}</span>
+                @if (v.xp !== 0) {
+                  <strong [class.positivo]="v.xp > 0" [class.negativo]="v.xp < 0">{{ v.xp > 0 ? '+' : '' }}{{ v.xp }} XP</strong>
+                }
+              </li>
+            }
+          </ol>
+        } @else {
+          <p class="vuoto">La tua storia comincia con la prima missione.</p>
+        }
+
+        <section class="riquadro">
+          <h3>Salvataggio</h3>
+          <p class="nota">Tutto resta su questo dispositivo. Esporta una copia per non perderla o per spostarla su un altro telefono.</p>
+          <div class="azioni">
+            <button type="button" class="secondario" (click)="esporta()">Esporta salvataggio</button>
+            <button type="button" class="secondario" (click)="file.click()">Importa salvataggio</button>
+            <button type="button" class="pericolo" (click)="ricomincia()">Ricomincia da zero</button>
+          </div>
+          <input #file type="file" accept="application/json,.json" hidden (change)="importa(file)" />
+          @if (erroreImport()) {
+            <p class="errore" role="alert">{{ erroreImport() }}</p>
+          }
+        </section>
+      }
+
+      @case ('profilo') {
+        <app-scheda (modificaPersonaggio)="modificaPersonaggio.emit()" (rifaiTest)="rifaiTest.emit()" />
+      }
+    }
+  </main>
+</div>

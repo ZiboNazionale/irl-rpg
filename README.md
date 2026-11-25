@@ -1,59 +1,40 @@
-# IrlRpg
+# IRL RPG
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
+La tua vita come una modalità carriera: crei un personaggio 3D con le tue misure reali e un test calcola le sue caratteristiche.
 
-## Development server
+## Cosa c'è
 
-To start a local development server, run:
+1. **Personaggio 3D.** Un modello uomo e uno donna, generati in Blender con MPFB (MakeHuman), con scheletro. Altezza in cm, peso in kg e muscolatura deformano il corpo in tempo reale (griglia peso × muscoli di MakeHuman) e spostano le ossa di conseguenza. Si scelgono carnagione, occhi, sopracciglia, 28 capigliature con colore, completi oppure maglia e pantaloni separati, scarpe, cappelli e occhiali, con anteprime dei capi. I vestiti seguono corpo e posa, e la pelle sotto non si vede.
+2. **Test delle caratteristiche.** 45 domande, una alla volta, con risposta anche dai tasti 1–5. Calcolano 15 caratteristiche da 1 a 99:
+   - **Corpo:** Resistenza, Forza, Velocità, Mobilità
+   - **Carriera:** Hard skill, Gestione soldi, Focus, Organizzazione
+   - **Identità:** Carisma, Comunicazione, Umorismo, Creatività
+   - **Mente:** Disciplina, Motivazione, Benessere
+3. **Carta del giocatore.** Complessivo (OVR, media delle 12 abilità), personaggio a mezzo busto e tutte le caratteristiche, con quanto sono cambiate rispetto al test.
+4. **Copertina.** Si parte da una posa pronta, poi si clicca su braccia, gambe, testa o busto e li si ruota a mano; si muove la telecamera e si salva un'immagine con personaggio, OVR e statistiche. La posa resta sulla carta.
+5. **Carriera.** Ogni giorno 4 missioni nella vita reale, una per gruppo, sulle caratteristiche più deboli. Completarle dà XP (con bonus serie fino a +50%) e fa crescere le caratteristiche; le missioni non fatte, i giorni saltati e le ricadute nelle cattive abitudini tolgono XP e caratteristiche. Livelli con XP crescente, sfide settimanali, check-in giornaliero dell'umore (Benessere), diario e salvataggio esportabile.
+6. **App installabile.** Funziona offline e si può aggiungere alla schermata Home (PWA).
 
-```bash
-ng serve
-```
+Tutto resta nel browser: niente account e nessun dato inviato.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Sviluppo
 
 ```bash
-ng generate --help
+npm ci
+npm start      # http://localhost:4200
+npm test
+npm run build
 ```
 
-## Building
+## I modelli 3D
 
-To build the project run:
+I file in `public/modelli/` si generano dal pacchetto [MakeHuman system assets](https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html) (CC0), con Blender e l'estensione MPFB:
 
 ```bash
-ng build
+blender --background --python strumenti/blender/esporta_personaggi.py -- <asset di sistema> <cartella dei pacchetti> <uscita>
+node strumenti/blender/prepara_per_web.mjs <uscita> public/modelli <ffmpeg> <gltf-transform cli.js>
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Servono il pacchetto di sistema e i pacchetti di MakeHuman per capelli, magliette, pantaloni, gonne, scarpe, cappelli e occhiali (hair01/03, shirts01/03, pants01/03, skirts01, shoes01/03, hats01, glasses01). Lo script crea per ogni sesso 11 forme del corpo (griglia 3×3 di peso e muscoli, più minima e massima altezza) e ci adatta tutti i capi. Corpo e capi diventano GLB separati con scheletro e con le forme come morph target; in più scrive `catalogo.json`, le posizioni delle ossa per ogni forma (`ossa-m.json`, `ossa-f.json`) e `crediti.json`. Il secondo script comprime i modelli (meshopt) e converte texture e anteprime in WebP. Le pose sono in `src/app/personaggio/pose.ts`.
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Gli asset di MakeHuman sono in CC0, tranne alcuni capi in CC-BY: autori e licenze sono in `public/modelli/crediti.json` e nell'app, sotto "Crediti dei modelli 3D".

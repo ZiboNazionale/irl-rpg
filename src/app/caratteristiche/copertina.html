@@ -1,0 +1,47 @@
+<div class="copertina" role="dialog" aria-modal="true" aria-labelledby="titolo-copertina">
+  <div class="palco">
+    <app-avatar-3d class="avatar" [aspetto]="giocatore.aspetto()" [posa]="giocatore.dati().posa"
+      [posaLibera]="giocatore.dati().posaLibera" [modificabile]="muovi()" inquadratura="libera"
+      (posaCambiata)="giocatore.cambiaPosaLibera($event)" (parteScelta)="parte.set($event)" />
+
+    <!-- Cornice della copertina, sopra al personaggio (non blocca il trascinamento). -->
+    <div class="cornice" aria-hidden="true">
+      <div class="alto">
+        <div class="ovr"><strong>{{ ovr() }}</strong><span>OVR</span></div>
+      </div>
+      <div class="basso">
+        <p class="nome">{{ giocatore.dati().nome }}</p>
+        <ul class="sigle">
+          @for (m of migliori(); track m.id) {
+            <li><strong>{{ m.valore }}</strong> {{ m.sigla }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <aside class="comandi">
+    <h2 id="titolo-copertina">Copertina</h2>
+    <p class="aiuto">Clicca su una parte del corpo (braccio, gamba, testa…) e ruotala con le maniglie colorate.
+      Trascina fuori dal corpo per girare la telecamera, usa la rotella (o due dita) per avvicinarti.</p>
+    <label class="interruttore">
+      <input type="checkbox" [checked]="muovi()" (change)="muovi.set($any($event.target).checked)" />
+      Muovi il corpo
+    </label>
+    <p class="parte" aria-live="polite">{{ muovi() ? (parte() ? 'Stai muovendo: ' + parte() : 'Nessuna parte selezionata') : '' }}</p>
+    @if (hasPosaLibera()) {
+      <button type="button" class="secondario piccolo" (click)="giocatore.cambiaPosa(giocatore.dati().posa)">Ripristina la posa</button>
+    }
+    <fieldset>
+      <legend>Parti da una posa</legend>
+      <div class="pose">
+        @for (p of pose; track p.id) {
+          <button type="button" [class.attiva]="giocatore.dati().posa === p.id" [attr.aria-pressed]="giocatore.dati().posa === p.id"
+            (click)="giocatore.cambiaPosa(p.id)">{{ p.nome }}</button>
+        }
+      </div>
+    </fieldset>
+    <button type="button" class="primario" (click)="salva()">Salva copertina</button>
+    <button type="button" class="secondario" (click)="chiudi.emit()">Torna alla scheda</button>
+  </aside>
+</div>

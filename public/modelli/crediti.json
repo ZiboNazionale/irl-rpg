@@ -1,0 +1,157 @@
+{
+ "culturalibre_hair_02": {
+  "nome": "Corti con ciuffo",
+  "autore": "MHteam",
+  "licenza": "AGPL3 (see also http://www.makehuman.org/node/320)"
+ },
+ "culturalibre_hair_05": {
+  "nome": "Spettinati",
+  "autore": "culturalibre",
+  "licenza": "CC-0"
+ },
+ "culturalibre_hair_14": {
+  "nome": "Corti scalati",
+  "autore": "culturalibre",
+  "licenza": "CC-by"
+ },
+ "punkduck_alpha7_curly": {
+  "nome": "Ricci",
+  "autore": "Unknown, adaptation by punkduck",
+  "licenza": "AGPL3 (see also http://www.makehuman.org/doc/node/external_tools_license.html)"
+ },
+ "littleright_bobcut_hair": {
+  "nome": "Caschetto corto",
+  "autore": "littleright",
+  "licenza": "AGPL3 (see also http://www.makehuman.org/doc/node/external_tools_license.html)"
+ },
+ "o4saken_chinesebob01": {
+  "nome": "Caschetto con frangia",
+  "autore": "O4saken",
+  "licenza": "CC BY 4.0"
+ },
+ "culturalibre_hair_13": {
+  "nome": "Codino mosso",
+  "autore": "culturalibre",
+  "licenza": "CC-by"
+ },
+ "rehmanpolanski_hair_bun_brown": {
+  "nome": "Chignon",
+  "autore": "Rehman Polanski",
+  "licenza": "AGPL3 (see also http://www.makehuman.org/doc/node/external_tools_license.html)"
+ },
+ "elvs_reverse_french_braid_bun": {
+  "nome": "Chignon intrecciato",
+  "autore": "Elvaerwyn",
+  "licenza": "CC_by"
+ },
+ "elvs_french_braid_variation": {
+  "nome": "Treccia francese",
+  "autore": "Unknown",
+  "licenza": "AGPL3 (see also http://www.makehuman.org/doc/node/external_tools_license.html)"
+ },
+ "culturalibre_hair_01": {
+  "nome": "Lunghi lisci",
+  "autore": "Unknown",
+  "licenza": "AGPL3 (see also http://www.makehuman.org/node/320)"
+ },
+ "o4saken_long01": {
+  "nome": "Lunghi con riga",
+  "autore": "04saken",
+  "licenza": "CC BY 4.0"
+ },
+ "punkduck_alpha7_long": {
+  "nome": "Lunghi mossi",
+  "autore": "Unknown, adaptation by punkduck",
+  "licenza": "AGPL3 (see also http://www.makehuman.org/doc/node/external_tools_license.html)"
+ },
+ "elvs_male_logo_tshirt1": {
+  "nome": "T-shirt nera",
+  "autore": "Elvaerwyn",
+  "licenza": "CC-BY 4.0"
+ },
+ "elvs_male_muscle_shirt1": {
+  "nome": "T-shirt aderente",
+  "autore": "Elvaerwyn",
+  "licenza": "CC_by"
+ },
+ "drednicolson_short-tail_camo_tee": {
+  "nome": "T-shirt militare",
+  "autore": "DredNicolson",
+  "licenza": "CCBY"
+ },
+ "mindfront_tank_top_01": {
+  "nome": "Canotta",
+  "autore": "Mindfront (Sweden)",
+  "licenza": "CC BY 4.0"
+ },
+ "elvs_male_trouser_short_1": {
+  "nome": "Bermuda",
+  "autore": "Elvaerwyn",
+  "licenza": "CC_by"
+ },
+ "elvs_male_trouser_short_2": {
+  "nome": "Bermuda con catena",
+  "autore": "Elvaerwyn",
+  "licenza": "CC_by"
+ },
+ "mindfront_shoes_biker_boots_male": {
+  "nome": "Anfibi",
+  "autore": "Mindfront (Sweden)",
+  "licenza": "CC BY 4.0"
+ },
+ "maciekg_leather_boots": {
+  "nome": "Stivali di pelle",
+  "autore": "MGgames",
+  "licenza": "AGPL3 (see also http://www.makehuman.org/doc/node/external_tools_license.html)"
+ },
+ "punkduck_winter_boots": {
+  "nome": "Stivali invernali",
+  "autore": "punkduck",
+  "licenza": "CC BY 3.0"
+ },
+ "jujube_newsboy_cap": {
+  "nome": "Coppola",
+  "autore": "Unknown",
+  "licenza": "AGPL3 (see also http://www.makehuman.org/doc/node/external_tools_license.html)"
+ },
+ "kwnet_at_optical_glasses": {
+  "nome": "Da vista",
+  "autore": "kwnet_at",
+  "licenza": "AGPL3 (see also http://www.makehuman.org/doc/node/external_tools_license.html)"
+ },
+ "frankyaye_glasses_library_male": {
+  "nome": "Da sole",
+  "autore": "Unknown",
+  "licenza": "AGPL3 (see also http://www.makehuman.org/doc/node/external_tools_license.html)"
+ },
+ "elvs_ladies_tank1": {
+  "nome": "Canotta",
+  "autore": "Elvaerwyn",
+  "licenza": "CC-by"
+ },
+ "elvs_ruffle_sleeve_peasant_blouse_1": {
+  "nome": "Blusa",
+  "autore": "Elvaerwyn",
+  "licenza": "CC-by"
+ },
+ "punkduck_sleeveless_shirt": {
+  "nome": "Camicia smanicata",
+  "autore": "punkduck",
+  "licenza": "CC BY 3.0"
+ },
+ "punkduck_female_short_jeans": {
+  "nome": "Shorts di jeans",
+  "autore": "punkduck",
+  "licenza": "CC-BY 4.0"
+ },
+ "mindfront_shoes_biker_boots_female": {
+  "nome": "Anfibi",
+  "autore": "Mindfront (Sweden)",
+  "licenza": "CC BY 4.0"
+ },
+ "scailman_low-heeled_boots": {
+  "nome": "Stivali",
+  "autore": "Unknown",
+  "licenza": "AGPL3 (see also http://www.makehuman.org/doc/node/external_tools_license.html)"
+ }
+}

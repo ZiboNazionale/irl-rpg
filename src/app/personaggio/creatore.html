@@ -1,0 +1,188 @@
+<div class="creatore">
+  <div class="palco">
+    <app-avatar-3d class="avatar" [aspetto]="aspetto()" [inquadratura]="inquadratura()" />
+    <div class="titolo-palco">
+      <p class="sopratitolo">{{ testFatto() ? 'Il tuo personaggio' : 'Passo 1 di 2' }}</p>
+      <h1>Crea il personaggio</h1>
+    </div>
+    <p class="suggerimento">Trascina per girare il personaggio</p>
+  </div>
+
+  <div class="pannello">
+    <nav class="schede" role="tablist" aria-label="Personalizza">
+      @for (s of schede; track s.id) {
+        <button type="button" role="tab" [id]="'scheda-' + s.id" [attr.aria-selected]="scheda() === s.id"
+          [attr.aria-controls]="'contenuto-' + s.id" [class.attiva]="scheda() === s.id" (click)="scheda.set(s.id)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path [attr.d]="s.icona" /></svg>
+          <span>{{ s.nome }}</span>
+        </button>
+      }
+    </nav>
+
+    <!-- Griglia di card con anteprima: usata per capelli, abiti, scarpe e accessori. -->
+    <ng-template #griglia let-voci="voci" let-campo="campo" let-attivo="attivo" let-titolo="titolo">
+      <fieldset class="gruppo">
+        <legend>{{ titolo }}</legend>
+        <div class="griglia">
+          @for (v of voci; track v.id) {
+            <button type="button" class="card" [class.attiva]="attivo === v.id" [attr.aria-pressed]="attivo === v.id"
+              (click)="scegli(campo, v.id)">
+              @if (v.anteprima) {
+                <img [src]="'modelli/' + v.anteprima" alt="" loading="lazy" width="80" height="80" />
+              } @else {
+                <span class="vuota" aria-hidden="true">{{ v.id === NESSUNO ? '∅' : '' }}</span>
+              }
+              <span class="nome">{{ v.nome }}</span>
+            </button>
+          }
+        </div>
+      </fieldset>
+    </ng-template>
+
+    <ng-template #colori let-campo="campo" let-lista="lista" let-titolo="titolo">
+      <fieldset class="gruppo">
+        <legend>{{ titolo }}</legend>
+        <div class="colori">
+          @for (c of lista; track c) {
+            <button type="button" class="colore" [class.originale]="c === ''" [style.--colore]="c"
+              [class.attivo]="$any(aspetto())[campo] === c" [attr.aria-pressed]="$any(aspetto())[campo] === c"
+              [attr.aria-label]="c === '' ? titolo + ': colore originale' : titolo + ' ' + $index"
+              (click)="colore(campo, c)"></button>
+          }
+          <label class="colore libero" [class.attivo]="liberoAttivo(campo, lista)" [title]="titolo + ': colore personalizzato'">
+            <input type="color" [value]="valoreColore(campo)" [attr.aria-label]="titolo + ': colore personalizzato'"
+              (input)="colore(campo, $any($event.target).value)" />
+          </label>
+        </div>
+      </fieldset>
+    </ng-template>
+
+    <div class="contenuto" role="tabpanel" [id]="'contenuto-' + scheda()" [attr.aria-labelledby]="'scheda-' + scheda()">
+      @switch (scheda()) {
+        @case ('fisico') {
+          <label class="campo">
+            <span class="etichetta">Nome del personaggio</span>
+            <input type="text" maxlength="30" autocomplete="nickname" placeholder="Es. Zibo"
+              [value]="giocatore.dati().nome" (input)="giocatore.cambiaNome($any($event.target).value)"
+              [attr.aria-invalid]="provato() && !nomeValido()" aria-describedby="errore-nome" />
+          </label>
+          @if (provato() && !nomeValido()) {
+            <p class="errore" id="errore-nome">Scrivi un nome per continuare.</p>
+          }
+
+          <div class="scelte due" role="radiogroup" aria-label="Corpo">
+            <button type="button" role="radio" [attr.aria-checked]="aspetto().sesso === 'm'" [class.attivo]="aspetto().sesso === 'm'"
+              (click)="sesso('m')">Uomo</button>
+            <button type="button" role="radio" [attr.aria-checked]="aspetto().sesso === 'f'" [class.attivo]="aspetto().sesso === 'f'"
+              (click)="sesso('f')">Donna</button>
+          </div>
+
+          <div class="cursore">
+            <label for="altezza" class="etichetta">Altezza</label>
+            <span class="valore"><input type="number" inputmode="numeric" aria-label="Altezza in centimetri"
+              [min]="limiti.altezzaCm.min" [max]="limiti.altezzaCm.max" [value]="aspetto().altezzaCm"
+              (change)="numero('altezzaCm', $any($event.target).value)" /> cm</span>
+            <input id="altezza" type="range" [min]="limiti.altezzaCm.min" [max]="limiti.altezzaCm.max" step="1"
+              [value]="aspetto().altezzaCm" (input)="cambia({ altezzaCm: +$any($event.target).value })" />
+          </div>
+          <div class="cursore">
+            <label for="peso" class="etichetta">Peso</label>
+            <span class="valore"><input type="number" inputmode="numeric" aria-label="Peso in chili"
+              [min]="limiti.pesoKg.min" [max]="limiti.pesoKg.max" [value]="aspetto().pesoKg"
+              (change)="numero('pesoKg', $any($event.target).value)" /> kg</span>
+            <input id="peso" type="range" [min]="limiti.pesoKg.min" [max]="limiti.pesoKg.max" step="1"
+              [value]="aspetto().pesoKg" (input)="cambia({ pesoKg: +$any($event.target).value })" />
+            <p class="nota">BMI {{ bmi().toFixed(1) }} · {{ descrizioneBmi() }}</p>
+          </div>
+          <div class="cursore">
+            <label for="muscoli" class="etichetta">Muscolatura</label>
+            <span class="valore">{{ (aspetto().muscoli * 100).toFixed(0) }}%</span>
+            <input id="muscoli" type="range" min="0" max="1" step="0.01" [value]="aspetto().muscoli"
+              (input)="cambia({ muscoli: +$any($event.target).value })" />
+          </div>
+        }
+        @case ('viso') {
+          <fieldset class="gruppo">
+            <legend>Carnagione</legend>
+            <div class="scelte">
+              @for (t of toni; track t.id) {
+                <button type="button" [class.attivo]="aspetto().pelle === t.id" [attr.aria-pressed]="aspetto().pelle === t.id"
+                  (click)="cambia({ pelle: t.id })">{{ t.nome }}</button>
+              }
+              <label class="scelta-libera" [class.attivo]="aspetto().pelle.startsWith('#')">
+                <input type="color" [value]="valoreColore('pelle')" aria-label="Carnagione: colore personalizzato"
+                  (input)="cambia({ pelle: $any($event.target).value })" />
+                Personalizzata
+              </label>
+            </div>
+          </fieldset>
+          @if (cat(); as c) {
+            <fieldset class="gruppo">
+              <legend>Occhi</legend>
+              <div class="griglia piccola">
+                @for (o of c.iridi; track o.id) {
+                  <button type="button" class="card" [class.attiva]="aspetto().occhi === o.id" [attr.aria-pressed]="aspetto().occhi === o.id"
+                    (click)="cambia({ occhi: o.id })">
+                    <img [src]="'modelli/' + o.texture" alt="" class="iride" width="56" height="56" />
+                    <span class="nome">{{ o.nome }}</span>
+                  </button>
+                }
+              </div>
+            </fieldset>
+            <ng-container [ngTemplateOutlet]="colori"
+              [ngTemplateOutletContext]="{ campo: 'coloreOcchi', lista: [''], titolo: 'Colore degli occhi' }" />
+            <ng-container [ngTemplateOutlet]="griglia"
+              [ngTemplateOutletContext]="{ voci: sopracciglia(), campo: 'sopracciglia', attivo: aspetto().sopracciglia, titolo: 'Sopracciglia' }" />
+          }
+        }
+        @case ('capelli') {
+          <ng-container [ngTemplateOutlet]="colori" [ngTemplateOutletContext]="{ campo: 'coloreCapelli', lista: coloriCapelli, titolo: 'Colore' }" />
+          <ng-container [ngTemplateOutlet]="griglia"
+            [ngTemplateOutletContext]="{ voci: capelli(), campo: 'capelli', attivo: aspetto().capelli, titolo: 'Taglio' }" />
+        }
+        @case ('abiti') {
+          <ng-container [ngTemplateOutlet]="griglia"
+            [ngTemplateOutletContext]="{ voci: completi(), campo: 'completo', attivo: aspetto().completo, titolo: 'Completo' }" />
+          @if (aspetto().completo !== NESSUNO) {
+            <ng-container [ngTemplateOutlet]="colori" [ngTemplateOutletContext]="{ campo: 'coloreCompleto', lista: coloriVestiti, titolo: 'Colore del completo' }" />
+          } @else {
+            <ng-container [ngTemplateOutlet]="griglia"
+              [ngTemplateOutletContext]="{ voci: maglie(), campo: 'maglia', attivo: aspetto().maglia, titolo: 'Maglia' }" />
+            <ng-container [ngTemplateOutlet]="colori" [ngTemplateOutletContext]="{ campo: 'coloreMaglia', lista: coloriVestiti, titolo: 'Colore della maglia' }" />
+            <ng-container [ngTemplateOutlet]="griglia"
+              [ngTemplateOutletContext]="{ voci: pantaloni(), campo: 'pantaloni', attivo: aspetto().pantaloni, titolo: 'Pantaloni' }" />
+            <ng-container [ngTemplateOutlet]="colori" [ngTemplateOutletContext]="{ campo: 'colorePantaloni', lista: coloriVestiti, titolo: 'Colore dei pantaloni' }" />
+          }
+        }
+        @case ('scarpe') {
+          <ng-container [ngTemplateOutlet]="griglia"
+            [ngTemplateOutletContext]="{ voci: scarpe(), campo: 'scarpe', attivo: aspetto().scarpe, titolo: 'Scarpe' }" />
+          <ng-container [ngTemplateOutlet]="colori" [ngTemplateOutletContext]="{ campo: 'coloreScarpe', lista: coloriVestiti, titolo: 'Colore' }" />
+        }
+        @case ('accessori') {
+          <ng-container [ngTemplateOutlet]="griglia"
+            [ngTemplateOutletContext]="{ voci: cappelli(), campo: 'cappello', attivo: aspetto().cappello, titolo: 'Cappello' }" />
+          @if (aspetto().cappello !== NESSUNO) {
+            <ng-container [ngTemplateOutlet]="colori" [ngTemplateOutletContext]="{ campo: 'coloreCappello', lista: coloriVestiti, titolo: 'Colore del cappello' }" />
+          }
+          <ng-container [ngTemplateOutlet]="griglia"
+            [ngTemplateOutletContext]="{ voci: occhiali(), campo: 'occhiali', attivo: aspetto().occhiali, titolo: 'Occhiali' }" />
+        }
+      }
+    </div>
+
+    <div class="azioni">
+      <button type="button" class="primario" (click)="avanti()">{{ testFatto() ? 'Salva e torna alla carriera' : 'Continua con il test' }}</button>
+      <details class="crediti">
+        <summary>Crediti dei modelli 3D</summary>
+        <p>Corpo, capelli e vestiti da <a href="https://www.makehumancommunity.org" target="_blank" rel="noopener">MakeHuman</a>
+          (CC0), con questi capi in licenza CC-BY:</p>
+        <ul>
+          @for (c of crediti(); track c.nome + c.autore) {
+            <li>{{ c.nome }} · {{ c.autore }} · {{ c.licenza }}</li>
+          }
+        </ul>
+      </details>
+    </div>
+  </div>
+</div>

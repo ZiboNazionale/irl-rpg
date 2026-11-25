@@ -1,0 +1,74 @@
+<div class="scheda">
+  <section class="carta" aria-label="Carta del giocatore">
+    <div class="carta__alto">
+      <div class="ovr">
+        <strong>{{ ovr() }}</strong>
+        <span>OVR</span>
+      </div>
+    </div>
+    <app-avatar-3d class="carta__avatar" [aspetto]="giocatore.aspetto()" [posa]="giocatore.dati().posa"
+      [posaLibera]="giocatore.dati().posaLibera" inquadratura="busto" />
+    <h1 class="carta__nome">{{ giocatore.dati().nome }}</h1>
+    <ul class="carta__sigle">
+      @for (m of migliori(); track m.id) {
+        <li><strong>{{ m.valore }}</strong> {{ m.sigla }}</li>
+      }
+    </ul>
+  </section>
+
+  <div class="dettagli">
+    <header>
+      <p class="sopratitolo">{{ rivelazione() ? 'Test completato' : 'Livello ' + giocatore.livello().livello }}</p>
+      <h2 class="titolo">{{ rivelazione() ? 'Ecco da dove parti.' : 'La tua scheda' }}</h2>
+      <p class="sottotitolo">Ogni missione completata farà salire le tue caratteristiche.</p>
+      @if (rivelazione()) {
+        <button type="button" class="primario grande" (click)="inizia.emit()">Inizia la carriera</button>
+      }
+    </header>
+
+    <div class="mente">
+      @for (c of mente(); track c.id) {
+        <div class="metrica">
+          <span class="metrica__nome">{{ c.nome }}</span>
+          <strong>{{ punteggi()[c.id] }}<small>/99</small>
+            @if (variazione(c.id); as v) {
+              <em class="delta" [class.su]="v > 0" [class.giu]="v < 0">{{ v > 0 ? '▲' : '▼' }} {{ v > 0 ? v : -v }}</em>
+            }
+          </strong>
+          <div class="barra" [attr.data-livello]="livello(punteggi()[c.id])"><i [style.width.%]="punteggi()[c.id]"></i></div>
+          <span class="metrica__desc">{{ c.descrizione }}</span>
+        </div>
+      }
+    </div>
+
+    <div class="gruppi">
+      @for (g of gruppi; track g.nome) {
+        <section class="gruppo">
+          <h3>{{ g.nome }}</h3>
+          @for (c of g.caratteristiche; track c.id) {
+            <div class="riga" [title]="c.descrizione">
+              <span>{{ c.nome }}</span>
+              <strong>
+                @if (variazione(c.id); as v) {
+                  <em class="delta" [class.su]="v > 0" [class.giu]="v < 0">{{ v > 0 ? '▲' : '▼' }}{{ v > 0 ? v : -v }}</em>
+                }
+                {{ punteggi()[c.id] }}
+              </strong>
+              <div class="barra" [attr.data-livello]="livello(punteggi()[c.id])"><i [style.width.%]="punteggi()[c.id]"></i></div>
+            </div>
+          }
+        </section>
+      }
+    </div>
+
+    <div class="azioni">
+      <button type="button" class="primario" (click)="copertina.set(true)">Crea la copertina</button>
+      <button type="button" class="secondario" (click)="modificaPersonaggio.emit()">Modifica personaggio</button>
+      <button type="button" class="secondario" (click)="rifaiTest.emit()">Rifai il test</button>
+    </div>
+  </div>
+</div>
+
+@if (copertina()) {
+  <app-copertina (chiudi)="copertina.set(false)" />
+}
