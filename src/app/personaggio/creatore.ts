@@ -73,15 +73,8 @@ export class Creatore {
   protected readonly nomeValido = computed(() => this.giocatore.dati().nome.trim().length > 0);
   protected readonly provato = signal(false);
 
-  /** Autori dei capi con licenza CC-BY (gli altri asset sono CC0). */
-  protected readonly crediti = signal<{ nome: string; autore: string; licenza: string }[]>([]);
-
   constructor() {
     catalogo().then((c) => this.catalogoCompleto.set(c), () => this.catalogoCompleto.set(null));
-    fetch('modelli/crediti.json')
-      .then((r) => (r.ok ? r.json() : {}))
-      .then((c: Record<string, { nome: string; autore: string; licenza: string }>) => this.crediti.set(Object.values(c)))
-      .catch(() => this.crediti.set([]));
   }
 
   protected cambia(modifica: Partial<Aspetto>) {

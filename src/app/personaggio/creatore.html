@@ -173,16 +173,6 @@
 
     <div class="azioni">
       <button type="button" class="primario" (click)="avanti()">{{ testFatto() ? 'Salva e torna alla carriera' : 'Continua con il test' }}</button>
-      <details class="crediti">
-        <summary>Crediti dei modelli 3D</summary>
-        <p>Corpo, capelli e vestiti da <a href="https://www.makehumancommunity.org" target="_blank" rel="noopener">MakeHuman</a>
-          (CC0), con questi capi in licenza CC-BY:</p>
-        <ul>
-          @for (c of crediti(); track c.nome + c.autore) {
-            <li>{{ c.nome }} · {{ c.autore }} · {{ c.licenza }}</li>
-          }
-        </ul>
-      </details>
     </div>
   </div>
 </div>

@@ -419,31 +419,6 @@ button:focus-visible {
   background: #0f1216;
 }
 
-.crediti {
-  margin-top: 10px;
-  color: var(--testo-tenue);
-  font-size: 12px;
-
-  summary {
-    cursor: pointer;
-  }
-
-  p {
-    margin: 8px 0 4px;
-  }
-
-  ul {
-    max-height: 120px;
-    margin: 0;
-    padding-left: 18px;
-    overflow-y: auto;
-  }
-
-  a {
-    color: var(--accento);
-  }
-}
-
 .primario {
   width: 100%;
   min-height: 52px;
