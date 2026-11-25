@@ -4,7 +4,7 @@ La tua vita come una modalità carriera: crei un personaggio 3D con le tue misur
 
 ## Cosa c'è
 
-1. **Personaggio 3D.** Un modello uomo e uno donna, generati in Blender con MPFB (MakeHuman), con scheletro. Altezza in cm, peso in kg e muscolatura deformano il corpo in tempo reale (griglia peso × muscoli di MakeHuman) e spostano le ossa di conseguenza. Si scelgono carnagione, occhi, sopracciglia, 28 capigliature con colore, completi oppure maglia e pantaloni separati, scarpe, cappelli e occhiali, con anteprime dei capi. I vestiti seguono corpo e posa, e la pelle sotto non si vede.
+1. **Personaggio 3D.** Un modello uomo e uno donna, creati in Blender con MPFB (MakeHuman), con scheletro. Altezza in cm, peso in kg e muscolatura deformano il corpo in tempo reale (griglia peso × muscoli di MakeHuman) e spostano le ossa di conseguenza. Si scelgono carnagione, occhi, sopracciglia, 28 capigliature con colore, completi oppure maglia e pantaloni separati, scarpe, cappelli e occhiali, con anteprime dei capi. I vestiti seguono corpo e posa, e la pelle sotto non si vede.
 2. **Test delle caratteristiche.** 45 domande, una alla volta, con risposta anche dai tasti 1–5. Calcolano 15 caratteristiche da 1 a 99:
    - **Corpo:** Resistenza, Forza, Velocità, Mobilità
    - **Carriera:** Hard skill, Gestione soldi, Focus, Organizzazione
