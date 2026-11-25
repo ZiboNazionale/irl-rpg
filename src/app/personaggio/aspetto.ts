@@ -13,7 +13,7 @@ export interface Aspetto extends Corporatura {
   sopracciglia: string;
   capelli: string;
   coloreCapelli: string;
-  /** Un completo intero (maglia e pantaloni insieme), oppure NESSUNO per usare maglia e pantaloni. */
+  /** Non più usato: maglia e pantaloni si scelgono sempre separati (resta NESSUNO per i salvataggi). */
   completo: string;
   coloreCompleto: string;
   maglia: string;
@@ -75,8 +75,8 @@ export const ASPETTO_INIZIALE: Record<Sesso, Aspetto> = {
     pesoKg: 72,
     sopracciglia: 'eyebrow001',
     capelli: 'short02',
-    completo: 'male_casualsuit04',
-    maglia: 'elvs_crude_t-shirt_male',
+    completo: NESSUNO,
+    maglia: 'toigo_basic_tucked_t-shirt',
   },
   f: {
     ...comune,
@@ -85,7 +85,7 @@ export const ASPETTO_INIZIALE: Record<Sesso, Aspetto> = {
     pesoKg: 58,
     sopracciglia: 'eyebrow010',
     capelli: 'ponytail01',
-    completo: 'female_casualsuit01',
-    maglia: 'joepal_crude_t-shirt_female',
+    completo: NESSUNO,
+    maglia: 'toigo_basic_tucked_t-shirt',
   },
 };

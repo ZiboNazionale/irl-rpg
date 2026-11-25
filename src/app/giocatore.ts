@@ -118,7 +118,11 @@ function aggiorna(dati: unknown): unknown {
     d.posa ??= 'naturale';
     d.posaLibera ??= {};
     d.carriera ??= structuredClone(CARRIERA_VUOTA);
-    if (d.aspetto) d.aspetto.coloreOcchi ??= '';
+    if (d.aspetto) {
+      d.aspetto.coloreOcchi ??= '';
+      // I completi interi non ci sono più: maglia e pantaloni si abbinano a piacere.
+      d.aspetto.completo = 'nessuno';
+    }
   }
   return dati;
 }

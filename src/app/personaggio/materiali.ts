@@ -86,7 +86,9 @@ export function materialeCapo(
   const usaTinta = { value: false };
   const materiale = new THREE.MeshStandardMaterial({
     map: texture,
-    roughness: trasparenza === 'sfumata' ? 0.75 : 0.85,
+    // Occhi lucidi (riflesso sull'iride); gli occhi si illuminano anche un po' da soli
+    // (nello shader), così l'iride si vede pure in ombra sotto le sopracciglia.
+    roughness: soloScuri ? 0.2 : trasparenza === 'sfumata' ? 0.75 : 0.85,
     metalness: 0,
     // "ritaglio": parti del tutto trasparenti (la cornea degli occhi);
     // "sfumata": capelli, ciglia e sopracciglia, con una trasparenza a puntini (alpha hash)
@@ -117,7 +119,7 @@ export function materialeCapo(
           float luce = dot(diffuseColor.rgb, vec3(0.299, 0.587, 0.114));
           vec3 tinto = u_tinta * clamp(luce * ${soloScuri ? '2.4' : '1.6'}, 0.0, 1.25);
           diffuseColor.rgb = ${soloScuri ? 'mix(tinto, diffuseColor.rgb, smoothstep(0.45, 0.7, luce))' : 'tinto'};
-        }`,
+        }${soloScuri ? '\n        totalEmissiveRadiance += diffuseColor.rgb * 0.45;' : ''}`,
       );
   };
   // Lo strato cambia lo shader: chiave di cache diversa per ogni strato.

@@ -1,11 +1,13 @@
 <div class="creatore">
   <div class="palco">
-    <app-avatar-3d class="avatar" [aspetto]="aspetto()" [inquadratura]="inquadratura()" />
+    <app-avatar-3d class="avatar" [aspetto]="aspetto()" [inquadratura]="inquadratura()" [posa]="giocatore.dati().posa"
+      [posaLibera]="giocatore.dati().posaLibera" [modificabile]="scheda() === 'posa'"
+      (posaCambiata)="giocatore.cambiaPosaLibera($event)" (parteScelta)="parte.set($event)" />
     <div class="titolo-palco">
       <p class="sopratitolo">{{ testFatto() ? 'Il tuo personaggio' : 'Passo 1 di 2' }}</p>
       <h1>Crea il personaggio</h1>
     </div>
-    <p class="suggerimento">Trascina per girare il personaggio</p>
+    <p class="suggerimento">{{ suggerimento() }}</p>
   </div>
 
   <div class="pannello">
@@ -118,19 +120,19 @@
           </fieldset>
           @if (cat(); as c) {
             <fieldset class="gruppo">
-              <legend>Occhi</legend>
+              <legend>Iride</legend>
               <div class="griglia piccola">
                 @for (o of c.iridi; track o.id) {
                   <button type="button" class="card" [class.attiva]="aspetto().occhi === o.id" [attr.aria-pressed]="aspetto().occhi === o.id"
                     (click)="cambia({ occhi: o.id })">
-                    <img [src]="'modelli/' + o.texture" alt="" class="iride" width="56" height="56" />
+                    <span class="iride" aria-hidden="true" [style.background-image]="'url(modelli/' + o.texture + ')'"></span>
                     <span class="nome">{{ o.nome }}</span>
                   </button>
                 }
               </div>
             </fieldset>
             <ng-container [ngTemplateOutlet]="colori"
-              [ngTemplateOutletContext]="{ campo: 'coloreOcchi', lista: [''], titolo: 'Colore degli occhi' }" />
+              [ngTemplateOutletContext]="{ campo: 'coloreOcchi', lista: [''], titolo: &quot;Colore dell'iride&quot; }" />
             <ng-container [ngTemplateOutlet]="griglia"
               [ngTemplateOutletContext]="{ voci: sopracciglia(), campo: 'sopracciglia', attivo: aspetto().sopracciglia, titolo: 'Sopracciglia' }" />
           }
@@ -142,22 +144,32 @@
         }
         @case ('abiti') {
           <ng-container [ngTemplateOutlet]="griglia"
-            [ngTemplateOutletContext]="{ voci: completi(), campo: 'completo', attivo: aspetto().completo, titolo: 'Completo' }" />
-          @if (aspetto().completo !== NESSUNO) {
-            <ng-container [ngTemplateOutlet]="colori" [ngTemplateOutletContext]="{ campo: 'coloreCompleto', lista: coloriVestiti, titolo: 'Colore del completo' }" />
-          } @else {
-            <ng-container [ngTemplateOutlet]="griglia"
-              [ngTemplateOutletContext]="{ voci: maglie(), campo: 'maglia', attivo: aspetto().maglia, titolo: 'Maglia' }" />
-            <ng-container [ngTemplateOutlet]="colori" [ngTemplateOutletContext]="{ campo: 'coloreMaglia', lista: coloriVestiti, titolo: 'Colore della maglia' }" />
-            <ng-container [ngTemplateOutlet]="griglia"
-              [ngTemplateOutletContext]="{ voci: pantaloni(), campo: 'pantaloni', attivo: aspetto().pantaloni, titolo: 'Pantaloni' }" />
-            <ng-container [ngTemplateOutlet]="colori" [ngTemplateOutletContext]="{ campo: 'colorePantaloni', lista: coloriVestiti, titolo: 'Colore dei pantaloni' }" />
-          }
+            [ngTemplateOutletContext]="{ voci: maglie(), campo: 'maglia', attivo: aspetto().maglia, titolo: 'Maglia' }" />
+          <ng-container [ngTemplateOutlet]="colori" [ngTemplateOutletContext]="{ campo: 'coloreMaglia', lista: coloriVestiti, titolo: 'Colore della maglia' }" />
+          <ng-container [ngTemplateOutlet]="griglia"
+            [ngTemplateOutletContext]="{ voci: pantaloni(), campo: 'pantaloni', attivo: aspetto().pantaloni, titolo: aspetto().sesso === 'f' ? 'Pantaloni e gonne' : 'Pantaloni' }" />
+          <ng-container [ngTemplateOutlet]="colori" [ngTemplateOutletContext]="{ campo: 'colorePantaloni', lista: coloriVestiti, titolo: 'Colore dei pantaloni' }" />
         }
         @case ('scarpe') {
           <ng-container [ngTemplateOutlet]="griglia"
             [ngTemplateOutletContext]="{ voci: scarpe(), campo: 'scarpe', attivo: aspetto().scarpe, titolo: 'Scarpe' }" />
           <ng-container [ngTemplateOutlet]="colori" [ngTemplateOutletContext]="{ campo: 'coloreScarpe', lista: coloriVestiti, titolo: 'Colore' }" />
+        }
+        @case ('posa') {
+          <fieldset class="gruppo">
+            <legend>Parti da una posa</legend>
+            <div class="scelte">
+              @for (p of pose; track p.id) {
+                <button type="button" [class.attivo]="giocatore.dati().posa === p.id" [attr.aria-pressed]="giocatore.dati().posa === p.id"
+                  (click)="giocatore.cambiaPosa(p.id)">{{ p.nome }}</button>
+              }
+            </div>
+          </fieldset>
+          <p class="nota">Clicca su braccia, gambe, testa o busto e ruotali con le maniglie colorate (rosso, verde e blu sono i tre assi).
+            Trascina fuori dal corpo per girare il personaggio. La posa resta salvata e finisce sulla tua carta.</p>
+          @if (posaModificata()) {
+            <button type="button" class="ripristina" (click)="giocatore.cambiaPosa(giocatore.dati().posa)">Ripristina la posa</button>
+          }
         }
         @case ('accessori') {
           <ng-container [ngTemplateOutlet]="griglia"

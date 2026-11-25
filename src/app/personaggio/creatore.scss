@@ -82,7 +82,7 @@ h1 {
 /* Schede con icone, in alto. */
 .schede {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   border-bottom: 1px solid var(--bordo);
   background: #0f1216;
 
@@ -97,9 +97,9 @@ h1 {
     background: none;
     color: var(--testo-tenue);
     font-family: var(--titoli);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
     cursor: pointer;
 
@@ -303,11 +303,16 @@ input[type='text'] {
   }
 
   .iride {
+    display: block;
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    object-fit: cover;
-    object-position: 38% 70%;
+    // Ingrandisce la texture sull'iride dell'occhio in basso a sinistra.
+    background-color: #ddd;
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position: -32px -114px;
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 25%);
   }
 
   .vuota {
@@ -470,5 +475,21 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .card {
     transition: none;
+  }
+}
+
+.ripristina {
+  min-height: 44px;
+  margin-top: 12px;
+  padding: 0 16px;
+  border: 1px solid var(--bordo);
+  border-radius: 10px;
+  background: var(--sfondo);
+  color: var(--testo);
+  font: inherit;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--accento);
   }
 }

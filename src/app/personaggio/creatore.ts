@@ -5,8 +5,9 @@ import { Avatar3d } from './avatar-3d';
 import { ASPETTO_INIZIALE, Aspetto, COLORI_CAPELLI, COLORI_VESTITI, NESSUNO, TONI_PELLE } from './aspetto';
 import { Capo, CatalogoSesso, catalogo } from './catalogo';
 import { LIMITI, Sesso, bmi } from './corpo';
+import { POSE } from './pose';
 
-type Scheda = 'fisico' | 'viso' | 'capelli' | 'abiti' | 'scarpe' | 'accessori';
+type Scheda = 'fisico' | 'viso' | 'capelli' | 'abiti' | 'scarpe' | 'accessori' | 'posa';
 type CampoColore = 'coloreOcchi' | 'coloreCapelli' | 'coloreCompleto' | 'coloreMaglia' | 'colorePantaloni' | 'coloreScarpe' | 'coloreCappello';
 type CampoCapo = 'capelli' | 'completo' | 'maglia' | 'pantaloni' | 'scarpe' | 'cappello' | 'occhiali' | 'sopracciglia';
 
@@ -46,7 +47,18 @@ export class Creatore {
     { id: 'abiti', nome: 'Abiti', icona: 'M8 3 4 6l2 4 2-1v12h8V9l2 1 2-4-4-3c-1 2-2.5 3-4 3S9 5 8 3Z' },
     { id: 'scarpe', nome: 'Scarpe', icona: 'M3 15c3 0 5-2 6-6l4 1c1 3 4 4 8 5v3H3Z' },
     { id: 'accessori', nome: 'Accessori', icona: 'M3 13h4l1.5-2h7L17 13h4M6.5 13a3 3 0 1 0 0 .1Zm11 0a3 3 0 1 0 0 .1Z' },
+    { id: 'posa', nome: 'Posa', icona: 'M12 2.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM5 9l7 1 7-3M12 10v5l-4 6m4-6 4 6' },
   ];
+
+  protected readonly pose = POSE;
+  /** La parte del corpo selezionata nella scheda Posa. */
+  protected readonly parte = signal<string | null>(null);
+  protected readonly posaModificata = computed(() => Object.keys(this.giocatore.dati().posaLibera).length > 0);
+  protected readonly suggerimento = computed(() => {
+    if (this.scheda() !== 'posa') return 'Trascina per girare il personaggio';
+    const p = this.parte();
+    return p ? `Stai muovendo: ${p}` : 'Clicca su una parte del corpo per muoverla';
+  });
 
   private readonly catalogoCompleto = signal<Record<Sesso, CatalogoSesso> | null>(null);
   protected readonly cat = computed(() => this.catalogoCompleto()?.[this.aspetto().sesso] ?? null);
@@ -55,7 +67,6 @@ export class Creatore {
     return [...(nessuno ? [{ id: NESSUNO, nome: nessuno }] : []), ...(lista ?? [])];
   }
   protected readonly capelli = computed(() => this.voci(this.cat()?.capelli, 'Rasati'));
-  protected readonly completi = computed(() => this.voci(this.cat()?.completi, 'Maglia e pantaloni separati'));
   protected readonly maglie = computed(() => this.voci(this.cat()?.maglie));
   protected readonly pantaloni = computed(() => this.voci(this.cat()?.pantaloni));
   protected readonly scarpe = computed(() => this.voci(this.cat()?.scarpe));
@@ -97,10 +108,9 @@ export class Creatore {
     return v !== '' && !lista.includes(v);
   }
 
-  /** Sceglie un capo. Maglia o pantaloni tolgono il completo intero; i colori ripartono dall'originale. */
+  /** Sceglie un capo; il suo colore riparte dall'originale. */
   protected scegli(campo: CampoCapo, id: string) {
     const modifica: Partial<Aspetto> = { [campo]: id };
-    if (campo === 'maglia' || campo === 'pantaloni') modifica.completo = NESSUNO;
     const colori: Partial<Record<CampoCapo, CampoColore>> = {
       completo: 'coloreCompleto', maglia: 'coloreMaglia', pantaloni: 'colorePantaloni', scarpe: 'coloreScarpe', cappello: 'coloreCappello',
     };
