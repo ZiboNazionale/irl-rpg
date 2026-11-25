@@ -1,0 +1,1442 @@
+{
+ "m": {
+  "sopracciglia": [
+   {
+    "id": "eyebrow001",
+    "nome": "Stile 1",
+    "file": "m/eyebrow001.glb",
+    "texture": "tex/eyebrow001.webp",
+    "anteprima": "anteprime/eyebrow001.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow002",
+    "nome": "Stile 2",
+    "file": "m/eyebrow002.glb",
+    "texture": "tex/eyebrow002.webp",
+    "anteprima": "anteprime/eyebrow002.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow003",
+    "nome": "Stile 3",
+    "file": "m/eyebrow003.glb",
+    "texture": "tex/eyebrow003.webp",
+    "anteprima": "anteprime/eyebrow003.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow004",
+    "nome": "Stile 4",
+    "file": "m/eyebrow004.glb",
+    "texture": "tex/eyebrow004.webp",
+    "anteprima": "anteprime/eyebrow004.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow005",
+    "nome": "Stile 5",
+    "file": "m/eyebrow005.glb",
+    "texture": "tex/eyebrow005.webp",
+    "anteprima": "anteprime/eyebrow005.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow006",
+    "nome": "Stile 6",
+    "file": "m/eyebrow006.glb",
+    "texture": "tex/eyebrow006.webp",
+    "anteprima": "anteprime/eyebrow006.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow007",
+    "nome": "Stile 7",
+    "file": "m/eyebrow007.glb",
+    "texture": "tex/eyebrow007.webp",
+    "anteprima": "anteprime/eyebrow007.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow008",
+    "nome": "Stile 8",
+    "file": "m/eyebrow008.glb",
+    "texture": "tex/eyebrow008.webp",
+    "anteprima": "anteprime/eyebrow008.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow009",
+    "nome": "Stile 9",
+    "file": "m/eyebrow009.glb",
+    "texture": "tex/eyebrow009.webp",
+    "anteprima": "anteprime/eyebrow009.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow010",
+    "nome": "Stile 10",
+    "file": "m/eyebrow010.glb",
+    "texture": "tex/eyebrow010.webp",
+    "anteprima": "anteprime/eyebrow010.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow011",
+    "nome": "Stile 11",
+    "file": "m/eyebrow011.glb",
+    "texture": "tex/eyebrow011.webp",
+    "anteprima": "anteprime/eyebrow011.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow012",
+    "nome": "Stile 12",
+    "file": "m/eyebrow012.glb",
+    "texture": "tex/eyebrow012.webp",
+    "anteprima": "anteprime/eyebrow012.webp",
+    "trasparente": true
+   }
+  ],
+  "capelli": [
+   {
+    "id": "short02",
+    "nome": "Corti",
+    "file": "m/short02.glb",
+    "texture": "tex/short02.webp",
+    "anteprima": "anteprime/short02.webp",
+    "trasparente": true
+   },
+   {
+    "id": "short01",
+    "nome": "Corti spettinati",
+    "file": "m/short01.glb",
+    "texture": "tex/short01.webp",
+    "anteprima": "anteprime/short01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "short03",
+    "nome": "Corti con riga",
+    "file": "m/short03.glb",
+    "texture": "tex/short03.webp",
+    "anteprima": "anteprime/short03.webp",
+    "trasparente": true
+   },
+   {
+    "id": "short04",
+    "nome": "Corti all'indietro",
+    "file": "m/short04.glb",
+    "texture": "tex/short04.webp",
+    "anteprima": "anteprime/short04.webp",
+    "trasparente": true
+   },
+   {
+    "id": "cortu_short_messy_hair",
+    "nome": "Corti mossi",
+    "file": "m/cortu_short_messy_hair.glb",
+    "texture": "tex/cortu_short_messy_hair.webp",
+    "anteprima": "anteprime/cortu_short_messy_hair.webp",
+    "trasparente": true
+   },
+   {
+    "id": "culturalibre_hair_02",
+    "nome": "Corti con ciuffo",
+    "file": "m/culturalibre_hair_02.glb",
+    "texture": "tex/culturalibre_hair_02.webp",
+    "anteprima": "anteprime/culturalibre_hair_02.webp",
+    "trasparente": true
+   },
+   {
+    "id": "culturalibre_hair_05",
+    "nome": "Spettinati",
+    "file": "m/culturalibre_hair_05.glb",
+    "texture": "tex/culturalibre_hair_05.webp",
+    "anteprima": "anteprime/culturalibre_hair_05.webp",
+    "trasparente": true
+   },
+   {
+    "id": "culturalibre_hair_14",
+    "nome": "Corti scalati",
+    "file": "m/culturalibre_hair_14.glb",
+    "texture": "tex/culturalibre_hair_14.webp",
+    "anteprima": "anteprime/culturalibre_hair_14.webp",
+    "trasparente": true
+   },
+   {
+    "id": "afro01",
+    "nome": "Afro",
+    "file": "m/afro01.glb",
+    "texture": "tex/afro01.webp",
+    "anteprima": "anteprime/afro01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "punkduck_alpha7_curly",
+    "nome": "Ricci",
+    "file": "m/punkduck_alpha7_curly.glb",
+    "texture": "tex/punkduck_alpha7_curly.webp",
+    "anteprima": "anteprime/punkduck_alpha7_curly.webp",
+    "trasparente": true
+   },
+   {
+    "id": "bob01",
+    "nome": "Caschetto",
+    "file": "m/bob01.glb",
+    "texture": "tex/bob01.webp",
+    "anteprima": "anteprime/bob01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "bob02",
+    "nome": "Caschetto liscio",
+    "file": "m/bob02.glb",
+    "texture": "tex/bob02.webp",
+    "anteprima": "anteprime/bob02.webp",
+    "trasparente": true
+   },
+   {
+    "id": "littleright_bobcut_hair",
+    "nome": "Caschetto corto",
+    "file": "m/littleright_bobcut_hair.glb",
+    "texture": "tex/littleright_bobcut_hair.webp",
+    "anteprima": "anteprime/littleright_bobcut_hair.webp",
+    "trasparente": true
+   },
+   {
+    "id": "toigo_blunt_bob",
+    "nome": "Caschetto netto",
+    "file": "m/toigo_blunt_bob.glb",
+    "texture": "tex/toigo_blunt_bob.webp",
+    "anteprima": "anteprime/toigo_blunt_bob.webp",
+    "trasparente": true
+   },
+   {
+    "id": "toigo_curled_under_bob",
+    "nome": "Caschetto bombato",
+    "file": "m/toigo_curled_under_bob.glb",
+    "texture": "tex/toigo_curled_under_bob.webp",
+    "anteprima": "anteprime/toigo_curled_under_bob.webp",
+    "trasparente": true
+   },
+   {
+    "id": "toigo_inverted_bob",
+    "nome": "Caschetto asimmetrico",
+    "file": "m/toigo_inverted_bob.glb",
+    "texture": "tex/toigo_inverted_bob.webp",
+    "anteprima": "anteprime/toigo_inverted_bob.webp",
+    "trasparente": true
+   },
+   {
+    "id": "o4saken_chinesebob01",
+    "nome": "Caschetto con frangia",
+    "file": "m/o4saken_chinesebob01.glb",
+    "texture": "tex/o4saken_chinesebob01.webp",
+    "anteprima": "anteprime/o4saken_chinesebob01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "ponytail01",
+    "nome": "Coda",
+    "file": "m/ponytail01.glb",
+    "texture": "tex/ponytail01.webp",
+    "anteprima": "anteprime/ponytail01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "culturalibre_hair_13",
+    "nome": "Codino mosso",
+    "file": "m/culturalibre_hair_13.glb",
+    "texture": "tex/culturalibre_hair_13.webp",
+    "anteprima": "anteprime/culturalibre_hair_13.webp",
+    "trasparente": true
+   },
+   {
+    "id": "rehmanpolanski_hair_bun_brown",
+    "nome": "Chignon",
+    "file": "m/rehmanpolanski_hair_bun_brown.glb",
+    "texture": "tex/rehmanpolanski_hair_bun_brown.webp",
+    "anteprima": "anteprime/rehmanpolanski_hair_bun_brown.webp",
+    "trasparente": true
+   },
+   {
+    "id": "elvs_reverse_french_braid_bun",
+    "nome": "Chignon intrecciato",
+    "file": "m/elvs_reverse_french_braid_bun.glb",
+    "texture": "tex/elvs_reverse_french_braid_bun.webp",
+    "anteprima": "anteprime/elvs_reverse_french_braid_bun.webp",
+    "trasparente": true
+   },
+   {
+    "id": "braid01",
+    "nome": "Treccia",
+    "file": "m/braid01.glb",
+    "texture": "tex/braid01.webp",
+    "anteprima": "anteprime/braid01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "elvs_french_braid_variation",
+    "nome": "Treccia francese",
+    "file": "m/elvs_french_braid_variation.glb",
+    "texture": "tex/elvs_french_braid_variation.webp",
+    "anteprima": "anteprime/elvs_french_braid_variation.webp",
+    "trasparente": true
+   },
+   {
+    "id": "long01",
+    "nome": "Lunghi",
+    "file": "m/long01.glb",
+    "texture": "tex/long01.webp",
+    "anteprima": "anteprime/long01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "culturalibre_hair_01",
+    "nome": "Lunghi lisci",
+    "file": "m/culturalibre_hair_01.glb",
+    "texture": "tex/culturalibre_hair_01.webp",
+    "anteprima": "anteprime/culturalibre_hair_01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "o4saken_long01",
+    "nome": "Lunghi con riga",
+    "file": "m/o4saken_long01.glb",
+    "texture": "tex/o4saken_long01.webp",
+    "anteprima": "anteprime/o4saken_long01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "punkduck_alpha7_long",
+    "nome": "Lunghi mossi",
+    "file": "m/punkduck_alpha7_long.glb",
+    "texture": "tex/punkduck_alpha7_long.webp",
+    "anteprima": "anteprime/punkduck_alpha7_long.webp",
+    "trasparente": true
+   },
+   {
+    "id": "faydaen_hair_1",
+    "nome": "Mossi",
+    "file": "m/faydaen_hair_1.glb",
+    "texture": "tex/faydaen_hair_1.webp",
+    "anteprima": "anteprime/faydaen_hair_1.webp",
+    "trasparente": true
+   }
+  ],
+  "completi": [
+   {
+    "id": "male_casualsuit04",
+    "nome": "T-shirt e jeans",
+    "file": "m/male_casualsuit04.glb",
+    "texture": "tex/male_casualsuit04.webp",
+    "anteprima": "anteprime/male_casualsuit04.webp",
+    "bitNascosto": 0
+   },
+   {
+    "id": "male_casualsuit06",
+    "nome": "T-shirt bianca e jeans",
+    "file": "m/male_casualsuit06.glb",
+    "texture": "tex/male_casualsuit06.webp",
+    "anteprima": "anteprime/male_casualsuit06.webp",
+    "bitNascosto": 1
+   },
+   {
+    "id": "male_casualsuit02",
+    "nome": "Maglia e jeans",
+    "file": "m/male_casualsuit02.glb",
+    "texture": "tex/male_casualsuit02.webp",
+    "anteprima": "anteprime/male_casualsuit02.webp",
+    "bitNascosto": 2
+   },
+   {
+    "id": "male_casualsuit01",
+    "nome": "Camicia e jeans",
+    "file": "m/male_casualsuit01.glb",
+    "texture": "tex/male_casualsuit01.webp",
+    "anteprima": "anteprime/male_casualsuit01.webp",
+    "bitNascosto": 3
+   },
+   {
+    "id": "male_casualsuit03",
+    "nome": "Camicia a quadri e jeans",
+    "file": "m/male_casualsuit03.glb",
+    "texture": "tex/male_casualsuit03.webp",
+    "anteprima": "anteprime/male_casualsuit03.webp",
+    "bitNascosto": 4
+   },
+   {
+    "id": "male_casualsuit05",
+    "nome": "Giacca e jeans",
+    "file": "m/male_casualsuit05.glb",
+    "texture": "tex/male_casualsuit05.webp",
+    "anteprima": "anteprime/male_casualsuit05.webp",
+    "bitNascosto": 5
+   },
+   {
+    "id": "male_elegantsuit01",
+    "nome": "Abito elegante",
+    "file": "m/male_elegantsuit01.glb",
+    "texture": "tex/male_elegantsuit01.webp",
+    "anteprima": "anteprime/male_elegantsuit01.webp",
+    "bitNascosto": 6
+   },
+   {
+    "id": "male_worksuit01",
+    "nome": "Salopette da lavoro",
+    "file": "m/male_worksuit01.glb",
+    "texture": "tex/male_worksuit01.webp",
+    "anteprima": "anteprime/male_worksuit01.webp",
+    "bitNascosto": 7
+   }
+  ],
+  "maglie": [
+   {
+    "id": "elvs_crude_t-shirt_male",
+    "nome": "T-shirt bianca",
+    "file": "m/elvs_crude_t-shirt_male.glb",
+    "texture": "tex/elvs_crude_t-shirt_male.webp",
+    "anteprima": "anteprime/elvs_crude_t-shirt_male.webp",
+    "bitNascosto": 8
+   },
+   {
+    "id": "toigo_basic_tucked_t-shirt",
+    "nome": "T-shirt grigia",
+    "file": "m/toigo_basic_tucked_t-shirt.glb",
+    "texture": "tex/toigo_basic_tucked_t-shirt.webp",
+    "anteprima": "anteprime/toigo_basic_tucked_t-shirt.webp",
+    "bitNascosto": 9
+   },
+   {
+    "id": "elvs_male_logo_tshirt1",
+    "nome": "T-shirt nera",
+    "file": "m/elvs_male_logo_tshirt1.glb",
+    "texture": "tex/elvs_male_logo_tshirt1.webp",
+    "anteprima": "anteprime/elvs_male_logo_tshirt1.webp",
+    "bitNascosto": 10
+   },
+   {
+    "id": "elvs_male_muscle_shirt1",
+    "nome": "T-shirt aderente",
+    "file": "m/elvs_male_muscle_shirt1.glb",
+    "texture": "tex/elvs_male_muscle_shirt1.webp",
+    "anteprima": "anteprime/elvs_male_muscle_shirt1.webp",
+    "bitNascosto": 11
+   },
+   {
+    "id": "drednicolson_short-tail_camo_tee",
+    "nome": "T-shirt militare",
+    "file": "m/drednicolson_short-tail_camo_tee.glb",
+    "texture": "tex/drednicolson_short-tail_camo_tee.webp",
+    "anteprima": "anteprime/drednicolson_short-tail_camo_tee.webp",
+    "bitNascosto": 12
+   },
+   {
+    "id": "namuhekam_male_polo_shirt",
+    "nome": "Polo",
+    "file": "m/namuhekam_male_polo_shirt.glb",
+    "texture": "tex/namuhekam_male_polo_shirt.webp",
+    "anteprima": "anteprime/namuhekam_male_polo_shirt.webp",
+    "bitNascosto": 13
+   },
+   {
+    "id": "toigo_fisherman_sweater",
+    "nome": "Maglione",
+    "file": "m/toigo_fisherman_sweater.glb",
+    "texture": "tex/toigo_fisherman_sweater.webp",
+    "anteprima": "anteprime/toigo_fisherman_sweater.webp",
+    "bitNascosto": 14
+   },
+   {
+    "id": "mindfront_tank_top_01",
+    "nome": "Canotta",
+    "file": "m/mindfront_tank_top_01.glb",
+    "texture": "tex/mindfront_tank_top_01.webp",
+    "anteprima": "anteprime/mindfront_tank_top_01.webp",
+    "bitNascosto": 15
+   }
+  ],
+  "pantaloni": [
+   {
+    "id": "cortu_cargo_pants",
+    "nome": "Cargo",
+    "file": "m/cortu_cargo_pants.glb",
+    "texture": "tex/cortu_cargo_pants.webp",
+    "anteprima": "anteprime/cortu_cargo_pants.webp",
+    "bitNascosto": 16
+   },
+   {
+    "id": "toigo_wool_pants",
+    "nome": "Pantaloni di lana",
+    "file": "m/toigo_wool_pants.glb",
+    "texture": "tex/toigo_wool_pants.webp",
+    "anteprima": "anteprime/toigo_wool_pants.webp",
+    "bitNascosto": 17
+   },
+   {
+    "id": "elvs_male_trouser_short_1",
+    "nome": "Bermuda",
+    "file": "m/elvs_male_trouser_short_1.glb",
+    "texture": "tex/elvs_male_trouser_short_1.webp",
+    "anteprima": "anteprime/elvs_male_trouser_short_1.webp",
+    "bitNascosto": 18
+   },
+   {
+    "id": "elvs_male_trouser_short_2",
+    "nome": "Bermuda con catena",
+    "file": "m/elvs_male_trouser_short_2.glb",
+    "texture": "tex/elvs_male_trouser_short_2.webp",
+    "anteprima": "anteprime/elvs_male_trouser_short_2.webp",
+    "bitNascosto": 19
+   }
+  ],
+  "scarpe": [
+   {
+    "id": "shoes05",
+    "nome": "Sneakers bianche",
+    "file": "m/shoes05.glb",
+    "texture": "tex/shoes05.webp",
+    "anteprima": "anteprime/shoes05.webp",
+    "bitNascosto": 20
+   },
+   {
+    "id": "shoes06",
+    "nome": "Sneakers blu",
+    "file": "m/shoes06.glb",
+    "texture": "tex/shoes06.webp",
+    "anteprima": "anteprime/shoes06.webp",
+    "bitNascosto": 21
+   },
+   {
+    "id": "shoes02",
+    "nome": "Sneakers mimetiche",
+    "file": "m/shoes02.glb",
+    "texture": "tex/shoes02.webp",
+    "anteprima": "anteprime/shoes02.webp",
+    "bitNascosto": 22
+   },
+   {
+    "id": "shoes04",
+    "nome": "Scarpe nere",
+    "file": "m/shoes04.glb",
+    "texture": "tex/shoes04.webp",
+    "anteprima": "anteprime/shoes04.webp",
+    "bitNascosto": 23
+   },
+   {
+    "id": "shoes01",
+    "nome": "Scarpe eleganti",
+    "file": "m/shoes01.glb",
+    "texture": "tex/shoes01.webp",
+    "anteprima": "anteprime/shoes01.webp",
+    "bitNascosto": 24
+   },
+   {
+    "id": "toigo_mj_cloth_shoes",
+    "nome": "Slip-on",
+    "file": "m/toigo_mj_cloth_shoes.glb",
+    "texture": "tex/toigo_mj_cloth_shoes.webp",
+    "anteprima": "anteprime/toigo_mj_cloth_shoes.webp",
+    "bitNascosto": 25
+   },
+   {
+    "id": "toigo_ankle_boots_male",
+    "nome": "Stivaletti",
+    "file": "m/toigo_ankle_boots_male.glb",
+    "texture": "tex/toigo_ankle_boots_male.webp",
+    "anteprima": "anteprime/toigo_ankle_boots_male.webp",
+    "bitNascosto": 26
+   },
+   {
+    "id": "mindfront_shoes_biker_boots_male",
+    "nome": "Anfibi",
+    "file": "m/mindfront_shoes_biker_boots_male.glb",
+    "texture": "tex/mindfront_shoes_biker_boots_male.webp",
+    "anteprima": "anteprime/mindfront_shoes_biker_boots_male.webp",
+    "bitNascosto": 27
+   },
+   {
+    "id": "maciekg_leather_boots",
+    "nome": "Stivali di pelle",
+    "file": "m/maciekg_leather_boots.glb",
+    "texture": "tex/maciekg_leather_boots.webp",
+    "anteprima": "anteprime/maciekg_leather_boots.webp",
+    "bitNascosto": 28
+   },
+   {
+    "id": "punkduck_winter_boots",
+    "nome": "Stivali invernali",
+    "file": "m/punkduck_winter_boots.glb",
+    "texture": "tex/punkduck_winter_boots.webp",
+    "anteprima": "anteprime/punkduck_winter_boots.webp",
+    "bitNascosto": 29
+   },
+   {
+    "id": "shoes03",
+    "nome": "Stivali neri",
+    "file": "m/shoes03.glb",
+    "texture": "tex/shoes03.webp",
+    "anteprima": "anteprime/shoes03.webp",
+    "bitNascosto": 30
+   }
+  ],
+  "cappelli": [
+   {
+    "id": "jujube_newsboy_cap",
+    "nome": "Coppola",
+    "file": "m/jujube_newsboy_cap.glb",
+    "texture": "tex/jujube_newsboy_cap.webp",
+    "anteprima": "anteprime/jujube_newsboy_cap.webp",
+    "bitNascosto": 31
+   },
+   {
+    "id": "aethelraed_unraed_cloche_hat",
+    "nome": "Pescatora",
+    "file": "m/aethelraed_unraed_cloche_hat.glb",
+    "texture": "tex/aethelraed_unraed_cloche_hat.webp",
+    "anteprima": "anteprime/aethelraed_unraed_cloche_hat.webp",
+    "bitNascosto": 32
+   },
+   {
+    "id": "fedora01",
+    "nome": "Fedora",
+    "file": "m/fedora01.glb",
+    "texture": "tex/fedora01.webp",
+    "anteprima": "anteprime/fedora01.webp",
+    "bitNascosto": 33
+   },
+   {
+    "id": "fedora_cocked",
+    "nome": "Fedora inclinato",
+    "file": "m/fedora_cocked.glb",
+    "texture": "tex/fedora_cocked.webp",
+    "anteprima": "anteprime/fedora_cocked.webp",
+    "bitNascosto": 34
+   }
+  ],
+  "occhiali": [
+   {
+    "id": "kwnet_at_optical_glasses",
+    "nome": "Da vista",
+    "file": "m/kwnet_at_optical_glasses.glb",
+    "texture": "tex/kwnet_at_optical_glasses.webp",
+    "anteprima": "anteprime/kwnet_at_optical_glasses.webp"
+   },
+   {
+    "id": "spamrakuen_tbm_glasses_frames_01",
+    "nome": "Montatura nera",
+    "file": "m/spamrakuen_tbm_glasses_frames_01.glb",
+    "texture": "tex/spamrakuen_tbm_glasses_frames_01.webp",
+    "anteprima": "anteprime/spamrakuen_tbm_glasses_frames_01.webp"
+   },
+   {
+    "id": "spamrakuen_sagerfrogs_glasses_04",
+    "nome": "Montatura sottile",
+    "file": "m/spamrakuen_sagerfrogs_glasses_04.glb",
+    "texture": "tex/spamrakuen_sagerfrogs_glasses_04.webp",
+    "anteprima": "anteprime/spamrakuen_sagerfrogs_glasses_04.webp"
+   },
+   {
+    "id": "toigo_round_glasses_leopard",
+    "nome": "Tondi",
+    "file": "m/toigo_round_glasses_leopard.glb",
+    "texture": "tex/toigo_round_glasses_leopard.webp",
+    "anteprima": "anteprime/toigo_round_glasses_leopard.webp"
+   },
+   {
+    "id": "frankyaye_glasses_library_male",
+    "nome": "Da sole",
+    "file": "m/frankyaye_glasses_library_male.glb",
+    "texture": "tex/frankyaye_glasses_library_male.webp",
+    "anteprima": "anteprime/frankyaye_glasses_library_male.webp"
+   }
+  ],
+  "occhi": {
+   "id": "occhi",
+   "nome": "Occhi",
+   "file": "m/occhi.glb"
+  },
+  "ciglia": {
+   "id": "eyelashes01",
+   "nome": "Ciglia",
+   "file": "m/eyelashes01.glb",
+   "texture": "tex/eyelashes01.webp",
+   "trasparente": true
+  },
+  "corpo": "m/corpo.glb",
+  "ossa": "ossa-m.json",
+  "pelli": [
+   {
+    "id": "young_caucasian_male",
+    "texture": "tex/pelle-young_caucasian_male.webp"
+   },
+   {
+    "id": "young_asian_male",
+    "texture": "tex/pelle-young_asian_male.webp"
+   },
+   {
+    "id": "young_african_male",
+    "texture": "tex/pelle-young_african_male.webp"
+   }
+  ],
+  "iridi": [
+   {
+    "id": "brown",
+    "nome": "Marroni",
+    "texture": "tex/occhi-brown.webp"
+   },
+   {
+    "id": "brownlight",
+    "nome": "Nocciola",
+    "texture": "tex/occhi-brownlight.webp"
+   },
+   {
+    "id": "green",
+    "nome": "Verdi",
+    "texture": "tex/occhi-green.webp"
+   },
+   {
+    "id": "bluegreen",
+    "nome": "Verde-azzurri",
+    "texture": "tex/occhi-bluegreen.webp"
+   },
+   {
+    "id": "blue",
+    "nome": "Azzurri",
+    "texture": "tex/occhi-blue.webp"
+   },
+   {
+    "id": "deepblue",
+    "nome": "Blu",
+    "texture": "tex/occhi-deepblue.webp"
+   },
+   {
+    "id": "lightblue",
+    "nome": "Celesti",
+    "texture": "tex/occhi-lightblue.webp"
+   },
+   {
+    "id": "grey",
+    "nome": "Grigi",
+    "texture": "tex/occhi-grey.webp"
+   },
+   {
+    "id": "ice",
+    "nome": "Ghiaccio",
+    "texture": "tex/occhi-ice.webp"
+   }
+  ]
+ },
+ "f": {
+  "sopracciglia": [
+   {
+    "id": "eyebrow001",
+    "nome": "Stile 1",
+    "file": "f/eyebrow001.glb",
+    "texture": "tex/eyebrow001.webp",
+    "anteprima": "anteprime/eyebrow001.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow002",
+    "nome": "Stile 2",
+    "file": "f/eyebrow002.glb",
+    "texture": "tex/eyebrow002.webp",
+    "anteprima": "anteprime/eyebrow002.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow003",
+    "nome": "Stile 3",
+    "file": "f/eyebrow003.glb",
+    "texture": "tex/eyebrow003.webp",
+    "anteprima": "anteprime/eyebrow003.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow004",
+    "nome": "Stile 4",
+    "file": "f/eyebrow004.glb",
+    "texture": "tex/eyebrow004.webp",
+    "anteprima": "anteprime/eyebrow004.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow005",
+    "nome": "Stile 5",
+    "file": "f/eyebrow005.glb",
+    "texture": "tex/eyebrow005.webp",
+    "anteprima": "anteprime/eyebrow005.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow006",
+    "nome": "Stile 6",
+    "file": "f/eyebrow006.glb",
+    "texture": "tex/eyebrow006.webp",
+    "anteprima": "anteprime/eyebrow006.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow007",
+    "nome": "Stile 7",
+    "file": "f/eyebrow007.glb",
+    "texture": "tex/eyebrow007.webp",
+    "anteprima": "anteprime/eyebrow007.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow008",
+    "nome": "Stile 8",
+    "file": "f/eyebrow008.glb",
+    "texture": "tex/eyebrow008.webp",
+    "anteprima": "anteprime/eyebrow008.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow009",
+    "nome": "Stile 9",
+    "file": "f/eyebrow009.glb",
+    "texture": "tex/eyebrow009.webp",
+    "anteprima": "anteprime/eyebrow009.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow010",
+    "nome": "Stile 10",
+    "file": "f/eyebrow010.glb",
+    "texture": "tex/eyebrow010.webp",
+    "anteprima": "anteprime/eyebrow010.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow011",
+    "nome": "Stile 11",
+    "file": "f/eyebrow011.glb",
+    "texture": "tex/eyebrow011.webp",
+    "anteprima": "anteprime/eyebrow011.webp",
+    "trasparente": true
+   },
+   {
+    "id": "eyebrow012",
+    "nome": "Stile 12",
+    "file": "f/eyebrow012.glb",
+    "texture": "tex/eyebrow012.webp",
+    "anteprima": "anteprime/eyebrow012.webp",
+    "trasparente": true
+   }
+  ],
+  "capelli": [
+   {
+    "id": "short02",
+    "nome": "Corti",
+    "file": "f/short02.glb",
+    "texture": "tex/short02.webp",
+    "anteprima": "anteprime/short02.webp",
+    "trasparente": true
+   },
+   {
+    "id": "short01",
+    "nome": "Corti spettinati",
+    "file": "f/short01.glb",
+    "texture": "tex/short01.webp",
+    "anteprima": "anteprime/short01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "short03",
+    "nome": "Corti con riga",
+    "file": "f/short03.glb",
+    "texture": "tex/short03.webp",
+    "anteprima": "anteprime/short03.webp",
+    "trasparente": true
+   },
+   {
+    "id": "short04",
+    "nome": "Corti all'indietro",
+    "file": "f/short04.glb",
+    "texture": "tex/short04.webp",
+    "anteprima": "anteprime/short04.webp",
+    "trasparente": true
+   },
+   {
+    "id": "cortu_short_messy_hair",
+    "nome": "Corti mossi",
+    "file": "f/cortu_short_messy_hair.glb",
+    "texture": "tex/cortu_short_messy_hair.webp",
+    "anteprima": "anteprime/cortu_short_messy_hair.webp",
+    "trasparente": true
+   },
+   {
+    "id": "culturalibre_hair_02",
+    "nome": "Corti con ciuffo",
+    "file": "f/culturalibre_hair_02.glb",
+    "texture": "tex/culturalibre_hair_02.webp",
+    "anteprima": "anteprime/culturalibre_hair_02.webp",
+    "trasparente": true
+   },
+   {
+    "id": "culturalibre_hair_05",
+    "nome": "Spettinati",
+    "file": "f/culturalibre_hair_05.glb",
+    "texture": "tex/culturalibre_hair_05.webp",
+    "anteprima": "anteprime/culturalibre_hair_05.webp",
+    "trasparente": true
+   },
+   {
+    "id": "culturalibre_hair_14",
+    "nome": "Corti scalati",
+    "file": "f/culturalibre_hair_14.glb",
+    "texture": "tex/culturalibre_hair_14.webp",
+    "anteprima": "anteprime/culturalibre_hair_14.webp",
+    "trasparente": true
+   },
+   {
+    "id": "afro01",
+    "nome": "Afro",
+    "file": "f/afro01.glb",
+    "texture": "tex/afro01.webp",
+    "anteprima": "anteprime/afro01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "punkduck_alpha7_curly",
+    "nome": "Ricci",
+    "file": "f/punkduck_alpha7_curly.glb",
+    "texture": "tex/punkduck_alpha7_curly.webp",
+    "anteprima": "anteprime/punkduck_alpha7_curly.webp",
+    "trasparente": true
+   },
+   {
+    "id": "bob01",
+    "nome": "Caschetto",
+    "file": "f/bob01.glb",
+    "texture": "tex/bob01.webp",
+    "anteprima": "anteprime/bob01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "bob02",
+    "nome": "Caschetto liscio",
+    "file": "f/bob02.glb",
+    "texture": "tex/bob02.webp",
+    "anteprima": "anteprime/bob02.webp",
+    "trasparente": true
+   },
+   {
+    "id": "littleright_bobcut_hair",
+    "nome": "Caschetto corto",
+    "file": "f/littleright_bobcut_hair.glb",
+    "texture": "tex/littleright_bobcut_hair.webp",
+    "anteprima": "anteprime/littleright_bobcut_hair.webp",
+    "trasparente": true
+   },
+   {
+    "id": "toigo_blunt_bob",
+    "nome": "Caschetto netto",
+    "file": "f/toigo_blunt_bob.glb",
+    "texture": "tex/toigo_blunt_bob.webp",
+    "anteprima": "anteprime/toigo_blunt_bob.webp",
+    "trasparente": true
+   },
+   {
+    "id": "toigo_curled_under_bob",
+    "nome": "Caschetto bombato",
+    "file": "f/toigo_curled_under_bob.glb",
+    "texture": "tex/toigo_curled_under_bob.webp",
+    "anteprima": "anteprime/toigo_curled_under_bob.webp",
+    "trasparente": true
+   },
+   {
+    "id": "toigo_inverted_bob",
+    "nome": "Caschetto asimmetrico",
+    "file": "f/toigo_inverted_bob.glb",
+    "texture": "tex/toigo_inverted_bob.webp",
+    "anteprima": "anteprime/toigo_inverted_bob.webp",
+    "trasparente": true
+   },
+   {
+    "id": "o4saken_chinesebob01",
+    "nome": "Caschetto con frangia",
+    "file": "f/o4saken_chinesebob01.glb",
+    "texture": "tex/o4saken_chinesebob01.webp",
+    "anteprima": "anteprime/o4saken_chinesebob01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "ponytail01",
+    "nome": "Coda",
+    "file": "f/ponytail01.glb",
+    "texture": "tex/ponytail01.webp",
+    "anteprima": "anteprime/ponytail01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "culturalibre_hair_13",
+    "nome": "Codino mosso",
+    "file": "f/culturalibre_hair_13.glb",
+    "texture": "tex/culturalibre_hair_13.webp",
+    "anteprima": "anteprime/culturalibre_hair_13.webp",
+    "trasparente": true
+   },
+   {
+    "id": "rehmanpolanski_hair_bun_brown",
+    "nome": "Chignon",
+    "file": "f/rehmanpolanski_hair_bun_brown.glb",
+    "texture": "tex/rehmanpolanski_hair_bun_brown.webp",
+    "anteprima": "anteprime/rehmanpolanski_hair_bun_brown.webp",
+    "trasparente": true
+   },
+   {
+    "id": "elvs_reverse_french_braid_bun",
+    "nome": "Chignon intrecciato",
+    "file": "f/elvs_reverse_french_braid_bun.glb",
+    "texture": "tex/elvs_reverse_french_braid_bun.webp",
+    "anteprima": "anteprime/elvs_reverse_french_braid_bun.webp",
+    "trasparente": true
+   },
+   {
+    "id": "braid01",
+    "nome": "Treccia",
+    "file": "f/braid01.glb",
+    "texture": "tex/braid01.webp",
+    "anteprima": "anteprime/braid01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "elvs_french_braid_variation",
+    "nome": "Treccia francese",
+    "file": "f/elvs_french_braid_variation.glb",
+    "texture": "tex/elvs_french_braid_variation.webp",
+    "anteprima": "anteprime/elvs_french_braid_variation.webp",
+    "trasparente": true
+   },
+   {
+    "id": "long01",
+    "nome": "Lunghi",
+    "file": "f/long01.glb",
+    "texture": "tex/long01.webp",
+    "anteprima": "anteprime/long01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "culturalibre_hair_01",
+    "nome": "Lunghi lisci",
+    "file": "f/culturalibre_hair_01.glb",
+    "texture": "tex/culturalibre_hair_01.webp",
+    "anteprima": "anteprime/culturalibre_hair_01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "o4saken_long01",
+    "nome": "Lunghi con riga",
+    "file": "f/o4saken_long01.glb",
+    "texture": "tex/o4saken_long01.webp",
+    "anteprima": "anteprime/o4saken_long01.webp",
+    "trasparente": true
+   },
+   {
+    "id": "punkduck_alpha7_long",
+    "nome": "Lunghi mossi",
+    "file": "f/punkduck_alpha7_long.glb",
+    "texture": "tex/punkduck_alpha7_long.webp",
+    "anteprima": "anteprime/punkduck_alpha7_long.webp",
+    "trasparente": true
+   },
+   {
+    "id": "faydaen_hair_1",
+    "nome": "Mossi",
+    "file": "f/faydaen_hair_1.glb",
+    "texture": "tex/faydaen_hair_1.webp",
+    "anteprima": "anteprime/faydaen_hair_1.webp",
+    "trasparente": true
+   }
+  ],
+  "completi": [
+   {
+    "id": "female_casualsuit01",
+    "nome": "T-shirt e jeans",
+    "file": "f/female_casualsuit01.glb",
+    "texture": "tex/female_casualsuit01.webp",
+    "anteprima": "anteprime/female_casualsuit01.webp",
+    "bitNascosto": 0
+   },
+   {
+    "id": "female_sportsuit01",
+    "nome": "Felpa e leggings",
+    "file": "f/female_sportsuit01.glb",
+    "texture": "tex/female_sportsuit01.webp",
+    "anteprima": "anteprime/female_sportsuit01.webp",
+    "bitNascosto": 1
+   },
+   {
+    "id": "female_elegantsuit01",
+    "nome": "Camicia e gonna",
+    "file": "f/female_elegantsuit01.glb",
+    "texture": "tex/female_elegantsuit01.webp",
+    "anteprima": "anteprime/female_elegantsuit01.webp",
+    "bitNascosto": 2
+   }
+  ],
+  "maglie": [
+   {
+    "id": "joepal_crude_t-shirt_female",
+    "nome": "T-shirt bianca",
+    "file": "f/joepal_crude_t-shirt_female.glb",
+    "texture": "tex/joepal_crude_t-shirt_female.webp",
+    "anteprima": "anteprime/joepal_crude_t-shirt_female.webp",
+    "bitNascosto": 3
+   },
+   {
+    "id": "toigo_basic_tucked_t-shirt",
+    "nome": "T-shirt grigia",
+    "file": "f/toigo_basic_tucked_t-shirt.glb",
+    "texture": "tex/toigo_basic_tucked_t-shirt.webp",
+    "anteprima": "anteprime/toigo_basic_tucked_t-shirt.webp",
+    "bitNascosto": 4
+   },
+   {
+    "id": "drednicolson_short-tail_camo_tee",
+    "nome": "T-shirt militare",
+    "file": "f/drednicolson_short-tail_camo_tee.glb",
+    "texture": "tex/drednicolson_short-tail_camo_tee.webp",
+    "anteprima": "anteprime/drednicolson_short-tail_camo_tee.webp",
+    "bitNascosto": 5
+   },
+   {
+    "id": "namuhekam_male_polo_shirt",
+    "nome": "Polo",
+    "file": "f/namuhekam_male_polo_shirt.glb",
+    "texture": "tex/namuhekam_male_polo_shirt.webp",
+    "anteprima": "anteprime/namuhekam_male_polo_shirt.webp",
+    "bitNascosto": 6
+   },
+   {
+    "id": "toigo_fisherman_sweater",
+    "nome": "Maglione",
+    "file": "f/toigo_fisherman_sweater.glb",
+    "texture": "tex/toigo_fisherman_sweater.webp",
+    "anteprima": "anteprime/toigo_fisherman_sweater.webp",
+    "bitNascosto": 7
+   },
+   {
+    "id": "elvs_ladies_tank1",
+    "nome": "Canotta",
+    "file": "f/elvs_ladies_tank1.glb",
+    "texture": "tex/elvs_ladies_tank1.webp",
+    "anteprima": "anteprime/elvs_ladies_tank1.webp",
+    "bitNascosto": 8
+   },
+   {
+    "id": "elvs_ruffle_sleeve_peasant_blouse_1",
+    "nome": "Blusa",
+    "file": "f/elvs_ruffle_sleeve_peasant_blouse_1.glb",
+    "texture": "tex/elvs_ruffle_sleeve_peasant_blouse_1.webp",
+    "anteprima": "anteprime/elvs_ruffle_sleeve_peasant_blouse_1.webp",
+    "bitNascosto": 9
+   },
+   {
+    "id": "punkduck_sleeveless_shirt",
+    "nome": "Camicia smanicata",
+    "file": "f/punkduck_sleeveless_shirt.glb",
+    "texture": "tex/punkduck_sleeveless_shirt.webp",
+    "anteprima": "anteprime/punkduck_sleeveless_shirt.webp",
+    "bitNascosto": 10
+   }
+  ],
+  "pantaloni": [
+   {
+    "id": "cortu_cargo_pants",
+    "nome": "Cargo",
+    "file": "f/cortu_cargo_pants.glb",
+    "texture": "tex/cortu_cargo_pants.webp",
+    "anteprima": "anteprime/cortu_cargo_pants.webp",
+    "bitNascosto": 11
+   },
+   {
+    "id": "toigo_wool_pants",
+    "nome": "Pantaloni di lana",
+    "file": "f/toigo_wool_pants.glb",
+    "texture": "tex/toigo_wool_pants.webp",
+    "anteprima": "anteprime/toigo_wool_pants.webp",
+    "bitNascosto": 12
+   },
+   {
+    "id": "punkduck_female_short_jeans",
+    "nome": "Shorts di jeans",
+    "file": "f/punkduck_female_short_jeans.glb",
+    "texture": "tex/punkduck_female_short_jeans.webp",
+    "anteprima": "anteprime/punkduck_female_short_jeans.webp",
+    "bitNascosto": 13
+   },
+   {
+    "id": "toigo_long_full_skirt",
+    "nome": "Gonna lunga",
+    "file": "f/toigo_long_full_skirt.glb",
+    "texture": "tex/toigo_long_full_skirt.webp",
+    "anteprima": "anteprime/toigo_long_full_skirt.webp",
+    "bitNascosto": 14
+   },
+   {
+    "id": "toigo_tiered_skirt",
+    "nome": "Gonna a balze",
+    "file": "f/toigo_tiered_skirt.glb",
+    "texture": "tex/toigo_tiered_skirt.webp",
+    "anteprima": "anteprime/toigo_tiered_skirt.webp",
+    "bitNascosto": 15
+   },
+   {
+    "id": "toigo_skirt_with_lace_ruffle",
+    "nome": "Gonna con pizzo",
+    "file": "f/toigo_skirt_with_lace_ruffle.glb",
+    "texture": "tex/toigo_skirt_with_lace_ruffle.webp",
+    "anteprima": "anteprime/toigo_skirt_with_lace_ruffle.webp",
+    "bitNascosto": 16
+   }
+  ],
+  "scarpe": [
+   {
+    "id": "shoes05",
+    "nome": "Sneakers bianche",
+    "file": "f/shoes05.glb",
+    "texture": "tex/shoes05.webp",
+    "anteprima": "anteprime/shoes05.webp",
+    "bitNascosto": 17
+   },
+   {
+    "id": "shoes06",
+    "nome": "Sneakers blu",
+    "file": "f/shoes06.glb",
+    "texture": "tex/shoes06.webp",
+    "anteprima": "anteprime/shoes06.webp",
+    "bitNascosto": 18
+   },
+   {
+    "id": "shoes02",
+    "nome": "Sneakers mimetiche",
+    "file": "f/shoes02.glb",
+    "texture": "tex/shoes02.webp",
+    "anteprima": "anteprime/shoes02.webp",
+    "bitNascosto": 19
+   },
+   {
+    "id": "shoes04",
+    "nome": "Scarpe nere",
+    "file": "f/shoes04.glb",
+    "texture": "tex/shoes04.webp",
+    "anteprima": "anteprime/shoes04.webp",
+    "bitNascosto": 20
+   },
+   {
+    "id": "shoes01",
+    "nome": "Scarpe eleganti",
+    "file": "f/shoes01.glb",
+    "texture": "tex/shoes01.webp",
+    "anteprima": "anteprime/shoes01.webp",
+    "bitNascosto": 21
+   },
+   {
+    "id": "toigo_mj_cloth_shoes",
+    "nome": "Slip-on",
+    "file": "f/toigo_mj_cloth_shoes.glb",
+    "texture": "tex/toigo_mj_cloth_shoes.webp",
+    "anteprima": "anteprime/toigo_mj_cloth_shoes.webp",
+    "bitNascosto": 22
+   },
+   {
+    "id": "toigo_ankle_boots_female",
+    "nome": "Stivaletti",
+    "file": "f/toigo_ankle_boots_female.glb",
+    "texture": "tex/toigo_ankle_boots_female.webp",
+    "anteprima": "anteprime/toigo_ankle_boots_female.webp",
+    "bitNascosto": 23
+   },
+   {
+    "id": "mindfront_shoes_biker_boots_female",
+    "nome": "Anfibi",
+    "file": "f/mindfront_shoes_biker_boots_female.glb",
+    "texture": "tex/mindfront_shoes_biker_boots_female.webp",
+    "anteprima": "anteprime/mindfront_shoes_biker_boots_female.webp",
+    "bitNascosto": 24
+   },
+   {
+    "id": "scailman_low-heeled_boots",
+    "nome": "Stivali",
+    "file": "f/scailman_low-heeled_boots.glb",
+    "texture": "tex/scailman_low-heeled_boots.webp",
+    "anteprima": "anteprime/scailman_low-heeled_boots.webp",
+    "bitNascosto": 25
+   },
+   {
+    "id": "toigo_flats",
+    "nome": "Ballerine",
+    "file": "f/toigo_flats.glb",
+    "texture": "tex/toigo_flats.webp",
+    "anteprima": "anteprime/toigo_flats.webp",
+    "bitNascosto": 26
+   },
+   {
+    "id": "punkduck_winter_boots",
+    "nome": "Stivali invernali",
+    "file": "f/punkduck_winter_boots.glb",
+    "texture": "tex/punkduck_winter_boots.webp",
+    "anteprima": "anteprime/punkduck_winter_boots.webp",
+    "bitNascosto": 27
+   },
+   {
+    "id": "shoes03",
+    "nome": "Stivali neri",
+    "file": "f/shoes03.glb",
+    "texture": "tex/shoes03.webp",
+    "anteprima": "anteprime/shoes03.webp",
+    "bitNascosto": 28
+   }
+  ],
+  "cappelli": [
+   {
+    "id": "jujube_newsboy_cap",
+    "nome": "Coppola",
+    "file": "f/jujube_newsboy_cap.glb",
+    "texture": "tex/jujube_newsboy_cap.webp",
+    "anteprima": "anteprime/jujube_newsboy_cap.webp",
+    "bitNascosto": 29
+   },
+   {
+    "id": "aethelraed_unraed_cloche_hat",
+    "nome": "Pescatora",
+    "file": "f/aethelraed_unraed_cloche_hat.glb",
+    "texture": "tex/aethelraed_unraed_cloche_hat.webp",
+    "anteprima": "anteprime/aethelraed_unraed_cloche_hat.webp",
+    "bitNascosto": 30
+   },
+   {
+    "id": "fedora01",
+    "nome": "Fedora",
+    "file": "f/fedora01.glb",
+    "texture": "tex/fedora01.webp",
+    "anteprima": "anteprime/fedora01.webp",
+    "bitNascosto": 31
+   },
+   {
+    "id": "fedora_cocked",
+    "nome": "Fedora inclinato",
+    "file": "f/fedora_cocked.glb",
+    "texture": "tex/fedora_cocked.webp",
+    "anteprima": "anteprime/fedora_cocked.webp",
+    "bitNascosto": 32
+   }
+  ],
+  "occhiali": [
+   {
+    "id": "kwnet_at_optical_glasses",
+    "nome": "Da vista",
+    "file": "f/kwnet_at_optical_glasses.glb",
+    "texture": "tex/kwnet_at_optical_glasses.webp",
+    "anteprima": "anteprime/kwnet_at_optical_glasses.webp"
+   },
+   {
+    "id": "spamrakuen_tbm_glasses_frames_01",
+    "nome": "Montatura nera",
+    "file": "f/spamrakuen_tbm_glasses_frames_01.glb",
+    "texture": "tex/spamrakuen_tbm_glasses_frames_01.webp",
+    "anteprima": "anteprime/spamrakuen_tbm_glasses_frames_01.webp"
+   },
+   {
+    "id": "spamrakuen_sagerfrogs_glasses_04",
+    "nome": "Montatura sottile",
+    "file": "f/spamrakuen_sagerfrogs_glasses_04.glb",
+    "texture": "tex/spamrakuen_sagerfrogs_glasses_04.webp",
+    "anteprima": "anteprime/spamrakuen_sagerfrogs_glasses_04.webp"
+   },
+   {
+    "id": "toigo_round_glasses_leopard",
+    "nome": "Tondi",
+    "file": "f/toigo_round_glasses_leopard.glb",
+    "texture": "tex/toigo_round_glasses_leopard.webp",
+    "anteprima": "anteprime/toigo_round_glasses_leopard.webp"
+   },
+   {
+    "id": "frankyaye_glasses_library_male",
+    "nome": "Da sole",
+    "file": "f/frankyaye_glasses_library_male.glb",
+    "texture": "tex/frankyaye_glasses_library_male.webp",
+    "anteprima": "anteprime/frankyaye_glasses_library_male.webp"
+   }
+  ],
+  "occhi": {
+   "id": "occhi",
+   "nome": "Occhi",
+   "file": "f/occhi.glb"
+  },
+  "ciglia": {
+   "id": "eyelashes02",
+   "nome": "Ciglia",
+   "file": "f/eyelashes02.glb",
+   "texture": "tex/eyelashes02.webp",
+   "trasparente": true
+  },
+  "corpo": "f/corpo.glb",
+  "ossa": "ossa-f.json",
+  "pelli": [
+   {
+    "id": "young_caucasian_female",
+    "texture": "tex/pelle-young_caucasian_female.webp"
+   },
+   {
+    "id": "young_asian_female",
+    "texture": "tex/pelle-young_asian_female.webp"
+   },
+   {
+    "id": "young_african_female",
+    "texture": "tex/pelle-young_african_female.webp"
+   }
+  ],
+  "iridi": [
+   {
+    "id": "brown",
+    "nome": "Marroni",
+    "texture": "tex/occhi-brown.webp"
+   },
+   {
+    "id": "brownlight",
+    "nome": "Nocciola",
+    "texture": "tex/occhi-brownlight.webp"
+   },
+   {
+    "id": "green",
+    "nome": "Verdi",
+    "texture": "tex/occhi-green.webp"
+   },
+   {
+    "id": "bluegreen",
+    "nome": "Verde-azzurri",
+    "texture": "tex/occhi-bluegreen.webp"
+   },
+   {
+    "id": "blue",
+    "nome": "Azzurri",
+    "texture": "tex/occhi-blue.webp"
+   },
+   {
+    "id": "deepblue",
+    "nome": "Blu",
+    "texture": "tex/occhi-deepblue.webp"
+   },
+   {
+    "id": "lightblue",
+    "nome": "Celesti",
+    "texture": "tex/occhi-lightblue.webp"
+   },
+   {
+    "id": "grey",
+    "nome": "Grigi",
+    "texture": "tex/occhi-grey.webp"
+   },
+   {
+    "id": "ice",
+    "nome": "Ghiaccio",
+    "texture": "tex/occhi-ice.webp"
+   }
+  ]
+ }
+}
